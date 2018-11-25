@@ -15,12 +15,10 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     public partial class FormCarInfo : Form
     {
         public string formName = "FormCarInfo";
-        string list1 = "select li.[LATHE_ID] as 车型编号,  li.[LATHE_NAME] as 车型名称 from LATHE_INFO li ";
-        string list2 = "select lc.[COLUMN_ID] as 列号,  li.[LATHE_NAME] as 车型名称, lc.[COLUMN_NAME] as 列名称 from LATHE_COLUMN lc " +
-             "inner join LATHE_INFO li on lc.LATHE_ID = li.LATHE_ID ";
-        string list3 = "select ci.[CARID] as 车号编号,  lc.[COLUMN_NAME] as 列名称, ci.[CARNAME] as 车号名称 from CARNO_INFO ci " +
-             "inner join LATHE_COLUMN lc on lc.COLUMN_ID = ci.COLUMN_ID ";
-        // RepairPRocessDao dao = new RepairPRocessDao();
+        string list1 = "select li.[LATHE_ID] as 车型编号,  li.[LATHE_NAME] as 车型 from LATHE_INFO li ";
+        string list2 = "select lc.[COLUMN_ID] as 列编号,   lc.[COLUMN_NAME] as 列号 from LATHE_COLUMN lc ";
+        string list3 = "select hi.[EQUIMENT_ID] as 设备编号,  hi.[EQUIMENT_NAME] as 吊挂设备 from HOISTINGEQUIPMENT_INFO hi ";
+        string list4 = "select dt.[DetectionTechnology_ID] as 检测技术编号,   dt.[Detection_Technology_NAME] as 检测技术 from DETECTION_TECHNOLOGY dt ";
         DataSet ds = new DataSet();
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         DataGridViewCellCollection oneLineCarInfo = null;  //传递要要修改的单行数据
@@ -32,6 +30,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
             FreshForm();
             //行高22
             gridView1.RowHeight = 32;
@@ -52,7 +51,6 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //不显示右键菜单
             gridView2.OptionsMenu.EnableColumnMenu = false;
             gridView2.Columns[0].Visible = false;
-            gridView2.Columns[1].Visible = false;
 
             //行高22
             gridView3.RowHeight = 32;
@@ -63,13 +61,19 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //不显示右键菜单
             gridView3.OptionsMenu.EnableColumnMenu = false;
             gridView3.Columns[0].Visible = false;
-            gridView3.Columns[1].Visible = false;
-        
-        }
 
-        /// <summary>
-        /// 主要是刷新DataGridView控件中的数据
-        /// </summary>
+            //行高22
+            gridView4.RowHeight = 32;
+            //不允许编辑
+            gridView4.OptionsBehavior.Editable = false;
+            //不允许用户拖动列和
+            gridView4.OptionsCustomization.AllowColumnMoving = false;
+            //不显示右键菜单
+            gridView4.OptionsMenu.EnableColumnMenu = false;
+            gridView4.Columns[0].Visible = false;
+
+        }
+        //设置面板信息 
         private void GetAllUserinfo(string strsql, GridControl gridControl1)
         {
             SqlCommand cmd = new SqlCommand(strsql, common.SqlHelper.GetConnection());
@@ -80,17 +84,16 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridControl1.DataSource = ds.Tables[0];
         }
 
-        /// <summary>
-        /// “添加”、“删除”和“修改”操作后刷新窗体，
-        /// 主要是刷新DataGridView控件中的数据
-        /// </summary>
+        //刷新面板显示所有信息
         private void FreshForm()
         {
             this.GetAllUserinfo(this.list1, gridControl1);
             this.GetAllUserinfo(this.list2, gridControl2);
             this.GetAllUserinfo(this.list3, gridControl3);
+            this.GetAllUserinfo(this.list4, gridControl4);
         }
 
+        //自动适应长宽度
         private void FormCarInfo_SizeChanged(object sender, EventArgs e)
         {
             //this.groupControl4.Width = this.Width;
@@ -275,12 +278,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             
         }
 
-        private void 添加车号ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 添加吊挂设备ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 strOperationFlag = "add";
-                FormCarNoEdit frm = new FormCarNoEdit(strOperationFlag, oneLineCarInfo);
+                FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, oneLineCarInfo);
                 frm.Owner = this;
                 frm.ShowDialog();
 
@@ -291,12 +294,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("添加车号信息时发生错误！" + ex.Message, "提示信息");
+                MessageBox.Show("添加吊挂设备信息时发生错误！" + ex.Message, "提示信息");
                 return;
             }
         }
 
-        private void 修改车号ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 修改吊挂设备ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -316,7 +319,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     strOperationFlag = "modify";
                     /*int a = gridView1.row
                     oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    FormCarNoEdit frm = new FormCarNoEdit(strOperationFlag, oneLineCarInfo);
+                    FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, oneLineCarInfo);
                     frm.Owner = this;
                     frm.ShowDialog();
                     if (frm.DialogResult == DialogResult.OK)
@@ -327,12 +330,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("修改车号信息时发生错误！" + ex.Message, "提示信息");
+                MessageBox.Show("修改吊挂设备信息时发生错误！" + ex.Message, "提示信息");
                 return;
             }
         }
 
-        private void 删除车号ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 删除吊挂设备ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -345,7 +348,96 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     }
                     else
                     {
-                        if (MessageBox.Show("确认删除车号信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+                        if (MessageBox.Show("确认吊挂设备信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+                        {
+                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
+                            if (dao.deleteCar(strCarId))
+                            {
+                                MessageBox.Show("成功删除");
+                                FreshForm();
+                            }*/
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("删除失败，这条数据被其他数据所引用，请先删除使用了该数据的子信息！\n\n详细信息：\n" + ex.Message, "提示信息");
+                return;
+            }
+        }
+
+        private void 添加检测技术ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                strOperationFlag = "add";
+                FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, oneLineCarInfo);
+                frm.Owner = this;
+                frm.ShowDialog();
+
+                if (frm.DialogResult == DialogResult.OK)
+                {
+                    FreshForm();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("添加检测技术信息时发生错误！" + ex.Message, "提示信息");
+                return;
+            }
+        }
+
+        private void 修改检测技术ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.gridView1.RowCount == 0)
+                {
+                    MessageBox.Show("请选中要修改的行行");
+                    return;
+                }
+                int selectedIndex = this.gridView1.GetSelectedRows()[0];
+                if (selectedIndex < 0)
+                {
+                    MessageBox.Show("请选中要修改的行行");
+                    return;
+                }
+                else
+                {
+                    strOperationFlag = "modify";
+                    /*int a = gridView1.row
+                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
+                    FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, oneLineCarInfo);
+                    frm.Owner = this;
+                    frm.ShowDialog();
+                    if (frm.DialogResult == DialogResult.OK)
+                    {
+                        FreshForm();
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("修改检测技术信息时发生错误！" + ex.Message, "提示信息");
+                return;
+            }
+        }
+
+        private void 删除检测技术ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.gridView1.RowCount > 0)
+                {
+                    if (this.gridView1.GetSelectedRows()[0] < 0)
+                    {
+                        MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("确认删除检测技术信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
                             /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
                             if (dao.deleteCar(strCarId))
@@ -376,7 +468,11 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void gridView3_DoubleClick(object sender, EventArgs e)
         {
-            this.修改车号ToolStripMenuItem.PerformClick();
+            this.修改吊挂设备ToolStripMenuItem.PerformClick();
+        }
+        private void gridView4_DoubleClick(object sender, EventArgs e)
+        {
+            this.修改检测技术ToolStripMenuItem.PerformClick();
         }
     }
 }

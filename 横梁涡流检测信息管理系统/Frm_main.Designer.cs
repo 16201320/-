@@ -60,6 +60,7 @@
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -75,9 +76,6 @@
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.customersNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -100,7 +98,6 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -361,6 +358,12 @@
             this.barButtonItem24.Id = 88;
             this.barButtonItem24.Name = "barButtonItem24";
             // 
+            // barButtonItem25
+            // 
+            this.barButtonItem25.Caption = "详细信息";
+            this.barButtonItem25.Id = 89;
+            this.barButtonItem25.Name = "barButtonItem25";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -464,10 +467,7 @@
             this.navBarItem1,
             this.navBarItem2,
             this.navBarItem3,
-            this.navBarItem4,
-            this.navBarItem5,
-            this.navBarItem6,
-            this.navBarItem7});
+            this.navBarItem4});
             this.navBarControl.Location = new System.Drawing.Point(0, 184);
             this.navBarControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.navBarControl.Name = "navBarControl";
@@ -480,7 +480,7 @@
             // 
             // employeesNavBarGroup
             // 
-            this.employeesNavBarGroup.Caption = "故障信息";
+            this.employeesNavBarGroup.Caption = "缺陷信息";
             this.employeesNavBarGroup.Expanded = true;
             this.employeesNavBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
@@ -496,35 +496,14 @@
             // 
             this.customersNavBarGroup.Caption = "基础信息";
             this.customersNavBarGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4)});
             this.customersNavBarGroup.Name = "customersNavBarGroup";
             // 
             // navBarItem4
             // 
-            this.navBarItem4.Caption = "列车信息";
+            this.navBarItem4.Caption = "基础信息";
             this.navBarItem4.Name = "navBarItem4";
             this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkClicked);
-            // 
-            // navBarItem5
-            // 
-            this.navBarItem5.Caption = "吊挂设备信息";
-            this.navBarItem5.Name = "navBarItem5";
-            this.navBarItem5.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem5_LinkClicked);
-            // 
-            // navBarItem6
-            // 
-            this.navBarItem6.Caption = "检测技术信息";
-            this.navBarItem6.Name = "navBarItem6";
-            this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
-            // 
-            // navBarItem7
-            // 
-            this.navBarItem7.Caption = "修程信息";
-            this.navBarItem7.Name = "navBarItem7";
-            this.navBarItem7.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem7_LinkPressed);
             // 
             // navBarGroup1
             // 
@@ -707,12 +686,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
             this.barSubItem4.Name = "barSubItem4";
             // 
-            // barButtonItem25
-            // 
-            this.barButtonItem25.Caption = "详细信息";
-            this.barButtonItem25.Id = 89;
-            this.barButtonItem25.Name = "barButtonItem25";
-            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -775,8 +748,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
@@ -795,7 +766,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;

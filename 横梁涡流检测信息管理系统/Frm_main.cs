@@ -26,10 +26,7 @@ namespace 横梁涡流检测信息管理系统
         public FrmLogin frmLogin = null;
         FormFaultInfo f11 = new FormFaultInfo();//故障信息
 
-        FormCarInfo f21 = new FormCarInfo();//列车信息面板
-        FormHoistingEquipmentInfo f22 = new FormHoistingEquipmentInfo();//吊挂设备信息面板
-        FormDETECTION_TECHNOLOGYInfo f23 = new FormDETECTION_TECHNOLOGYInfo();//检测技术信息面板
-        FormRepairPRocessInfo f24 = new FormRepairPRocessInfo();//修程信息
+        FormCarInfo f21 = new FormCarInfo();//基础信息面板
 
         FormFaultInfoSearch f31 = new FormFaultInfoSearch();//查询故障信息
 
@@ -101,7 +98,7 @@ namespace 横梁涡流检测信息管理系统
             FormFaultInfoEdit form = new FormFaultInfoEdit("add", null);
             form.ShowDialog();
         }
-        //切换为列车信息
+        //切换为基础信息
         private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             this.panelControl2.Controls.Clear();
@@ -109,33 +106,6 @@ namespace 横梁涡流检测信息管理系统
             f21.Height = this.panelControl2.Height;
             f21.Width = this.panelControl2.Width;
             f21.Show();
-        }
-        //切换为吊挂设备信息
-        private void navBarItem5_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            this.panelControl2.Controls.Clear();
-            this.panelControl2.Controls.Add(f22);
-            f22.Height = this.panelControl2.Height;
-            f22.Width = this.panelControl2.Width;
-            f22.Show();
-        }
-        //切换为检测技术信息
-        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            this.panelControl2.Controls.Clear();
-            this.panelControl2.Controls.Add(f23);
-            f23.Height = this.panelControl2.Height;
-            f23.Width = this.panelControl2.Width;
-            f23.Show();
-        }
-        //切换为修程信息
-        private void navBarItem7_LinkPressed(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            this.panelControl2.Controls.Clear();
-            this.panelControl2.Controls.Add(f24);
-            f24.Height = this.panelControl2.Height;
-            f24.Width = this.panelControl2.Width;
-            f24.Show();
         }
         //故障信息
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

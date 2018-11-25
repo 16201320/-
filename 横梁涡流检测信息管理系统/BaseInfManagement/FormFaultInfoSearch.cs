@@ -16,19 +16,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     public partial class FormFaultInfoSearch : Form
     {
         public string formName = "FormFaultInfoSearch";
-        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,ri.[REPAIR_NAME] as 修程,ci.[CARNAME] as 车号,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[IF_PENETRATION] as 是否贯穿,fi.[FAULT_POSITION] as 缺陷位置, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[LENGTH] as 缺陷长度,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[DEPTH] as 缺陷深度,fi.[PIC] as 缺陷图片,fi.[MEMO] as 备注" +
-            ",dt.[Detection_Technology_NAME] as 检测技术,fi.[INCREASE] as 增加幅度,fi.[PHASE] as 相位,fi.[FREQUENCY] as 频率,fi.[FRONT] as 前置,fi.[GAIN] as 增益,fi.[GAIN_RATIO] as 增益比,fi.[LOWPASS] as 低通, " +
-            " fi.[HIGHPASS] as 高通, fi.[DIGITAL_FILTERING] as 数字滤波, fi.[ARTIFICIAL_DEFECT_LENGTH] as 人工缺陷长度, fi.[ARTIFICIAL_DEFECT_WIDTH] as 人工缺陷宽度, fi.[ARTIFICIAL_DEFECT_HEIGHT] as 人工缺陷高度, fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
-            " from FAULT_INFO fi " +
-            "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
-             "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
-             "inner join REPAIRPROCESS_INFO ri on fi.REPAIR_ID = ri.REPAIR_ID " +
-             "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
-           "inner join CARNO_INFO ci on fi.CARID = ci.CARID " +
-            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
-           ;
-        // RepairPRocessDao dao = new RepairPRocessDao();
-        DataSet ds = new DataSet();
+        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度, fi.[IF_PENETRATION] as 是否贯穿 " +
+           ",dt.[Detection_Technology_NAME] as 检测技术, fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
+           " from FAULT_INFO fi " +
+           "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
+            "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
+            "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
+           "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
+          ;
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         DataGridViewCellCollection oneLineCarInfo = null;  //传递要要修改的单行数据
         public FormFaultInfoSearch()
@@ -51,12 +46,10 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             {
                 gridView1.Columns[i].Visible = false;
             }
-
+            this.详细信息ToolStripMenuItem.PerformClick();
         }
 
-        /// <summary>
-        /// 主要是刷新DataGridView控件中的数据
-        /// </summary>
+        //设置面板信息
         private void GetAllUserinfo(string strsql, GridControl gridControl1)
         {
             SqlCommand cmd = new SqlCommand(strsql, common.SqlHelper.GetConnection());
@@ -67,10 +60,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridControl1.DataSource = ds.Tables[0];
         }
 
-        /// <summary>
-        /// “添加”、“删除”和“修改”操作后刷新窗体，
-        /// 主要是刷新DataGridView控件中的数据
-        /// </summary>
+        //刷新面板显示所有信息
         private void FreshForm()
         {
             this.GetAllUserinfo(gs_carlist, gridControl1);
@@ -136,7 +126,34 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (this.gridView1.RowCount > 0)
+                {
+                    if (this.gridView1.GetSelectedRows()[0] < 0)
+                    {
+                        MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("确认删除故障信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+                        {
+                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
+                            if (dao.deleteCar(strCarId))
+                            {
+                                MessageBox.Show("成功删除");
+                                FreshForm();
+                            }*/
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("删除失败，这条数据被其他数据所引用，请先删除使用了该数据的子信息！\n\n详细信息：\n" + ex.Message, "提示信息");
+                return;
+            }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -146,18 +163,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void 详细信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 6; i < 14; i++)
+            for (int i = 7; i < gridView1.Columns.Count; i++)
             {
                 gridView1.Columns[i].Visible = true;
             }
+            FreshForm();
         }
 
         private void 缩略信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 6; i < gridView1.Columns.Count; i++)
+            for (int i = 7; i < gridView1.Columns.Count; i++)
             {
                 gridView1.Columns[i].Visible = false;
             }
+            FreshForm();
         }
     }
 }

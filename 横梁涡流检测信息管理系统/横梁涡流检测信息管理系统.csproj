@@ -86,12 +86,6 @@
     <Compile Include="BaseInfManagement\FormCarInfo.Designer.cs">
       <DependentUpon>FormCarInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInfManagement\FormDETECTION_TECHNOLOGYInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormDETECTION_TECHNOLOGYInfo.Designer.cs">
-      <DependentUpon>FormDETECTION_TECHNOLOGYInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseInfManagement\FormFaultInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,12 +103,6 @@
     </Compile>
     <Compile Include="BaseInfManagement\FormFaultInfoSearch.Designer.cs">
       <DependentUpon>FormFaultInfoSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormCarNoEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormCarNoEdit.Designer.cs">
-      <DependentUpon>FormCarNoEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseInfManagement\FormLatheColumnEdit.cs">
       <SubType>Form</SubType>
@@ -134,32 +122,14 @@
     <Compile Include="BaseInfManagement\FormDETECTION_TECHNOLOGYInfoEdit.Designer.cs">
       <DependentUpon>FormDETECTION_TECHNOLOGYInfoEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInfManagement\FormRepairPRocessInfoEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormRepairPRocessInfoEdit.Designer.cs">
-      <DependentUpon>FormRepairPRocessInfoEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseInfManagement\FormLatheInfoEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaseInfManagement\FormLatheInfoEdit.Designer.cs">
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInfManagement\FormRepairPRocessInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormRepairPRocessInfo.Designer.cs">
-      <DependentUpon>FormRepairPRocessInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataClass\SqlHelper.cs" />
     <Compile Include="Dao\LatheDao.cs" />
-    <Compile Include="BaseInfManagement\FormHoistingEquipmentInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInfManagement\FormHoistingEquipmentInfo.Designer.cs">
-      <DependentUpon>FormHoistingEquipmentInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dao\HoistingEquipmentInfoDao.cs" />
     <Compile Include="Dao\RepairPRocessDao.cs" />
     <Compile Include="SystemSetting\DLLAdmin.cs" />
@@ -183,9 +153,6 @@
     <EmbeddedResource Include="BaseInfManagement\FormCarInfo.resx">
       <DependentUpon>FormCarInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseInfManagement\FormDETECTION_TECHNOLOGYInfo.resx">
-      <DependentUpon>FormDETECTION_TECHNOLOGYInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaseInfManagement\FormFaultInfo.resx">
       <DependentUpon>FormFaultInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,12 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInfManagement\FormFaultInfoSearch.resx">
       <DependentUpon>FormFaultInfoSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInfManagement\FormHoistingEquipmentInfo.resx">
-      <DependentUpon>FormHoistingEquipmentInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInfManagement\FormCarNoEdit.resx">
-      <DependentUpon>FormCarNoEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInfManagement\FormLatheColumnEdit.resx">
       <DependentUpon>FormLatheColumnEdit.cs</DependentUpon>
@@ -210,14 +171,8 @@
     <EmbeddedResource Include="BaseInfManagement\FormDETECTION_TECHNOLOGYInfoEdit.resx">
       <DependentUpon>FormDETECTION_TECHNOLOGYInfoEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseInfManagement\FormRepairPRocessInfoEdit.resx">
-      <DependentUpon>FormRepairPRocessInfoEdit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaseInfManagement\FormLatheInfoEdit.resx">
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInfManagement\FormRepairPRocessInfo.resx">
-      <DependentUpon>FormRepairPRocessInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_main.resx">
       <DependentUpon>Frm_main.cs</DependentUpon>
