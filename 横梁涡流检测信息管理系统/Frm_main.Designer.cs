@@ -61,15 +61,22 @@
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.Navigation = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.employeesNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -158,10 +165,16 @@
             this.barButtonItem21,
             this.barButtonItem23,
             this.barButtonItem24,
-            this.barButtonItem25});
+            this.barButtonItem25,
+            this.Navigation,
+            this.barButtonItem26,
+            this.barButtonItem27,
+            this.barButtonItem28,
+            this.barButtonItem29,
+            this.barButtonItem30});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.ribbonControl.MaxItemId = 90;
+            this.ribbonControl.MaxItemId = 98;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -364,13 +377,69 @@
             this.barButtonItem25.Id = 89;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
+            // Navigation
+            // 
+            this.Navigation.Caption = "导航";
+            this.Navigation.Id = 90;
+            this.Navigation.ImageOptions.ImageUri.Uri = "NavigationBar";
+            this.Navigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem26),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem27),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem28),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem29)});
+            this.Navigation.Name = "Navigation";
+            // 
+            // barButtonItem26
+            // 
+            this.barButtonItem26.Caption = "缺陷信息";
+            this.barButtonItem26.Id = 91;
+            this.barButtonItem26.Name = "barButtonItem26";
+            this.barButtonItem26.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "基础信息";
+            this.barButtonItem27.Id = 92;
+            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // barButtonItem28
+            // 
+            this.barButtonItem28.Caption = "数据查询";
+            this.barButtonItem28.Id = 95;
+            this.barButtonItem28.Name = "barButtonItem28";
+            this.barButtonItem28.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // barButtonItem29
+            // 
+            this.barButtonItem29.Caption = "数据统计";
+            this.barButtonItem29.Id = 96;
+            this.barButtonItem29.Name = "barButtonItem29";
+            this.barButtonItem29.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "打印";
+            this.barButtonItem30.Id = 97;
+            this.barButtonItem30.ImageOptions.ImageUri.Uri = "Print";
+            this.barButtonItem30.Name = "barButtonItem30";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7,
             this.ribbonPageGroup1,
-            this.ribbonPageGroup});
+            this.ribbonPageGroup8});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "开始";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.AllowTextClipping = false;
+            this.ribbonPageGroup7.ItemLinks.Add(this.Navigation);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.ShowCaptionButton = false;
+            this.ribbonPageGroup7.Text = "导航";
             // 
             // ribbonPageGroup1
             // 
@@ -391,9 +460,16 @@
             this.ribbonPageGroup.ShowCaptionButton = false;
             this.ribbonPageGroup.Text = "背景";
             // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem30);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "打印";
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup,
             this.ribbonPageGroup5,
             this.ribbonPageGroup2});
             this.ribbonPage2.Name = "ribbonPage2";
@@ -419,10 +495,9 @@
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup3});
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "关于";
+            this.ribbonPage3.Text = "帮助";
             // 
             // ribbonPageGroup3
             // 
@@ -431,14 +506,6 @@
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.ShowCaptionButton = false;
             this.ribbonPageGroup3.Text = "帮助";
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.AllowTextClipping = false;
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem24);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.ShowCaptionButton = false;
-            this.ribbonPageGroup7.Text = "关于";
             // 
             // officeNavigationBar
             // 
@@ -783,12 +850,19 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarSubItem barSubItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
+        private DevExpress.XtraBars.BarSubItem Navigation;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem26;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }

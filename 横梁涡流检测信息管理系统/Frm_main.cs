@@ -48,7 +48,7 @@ namespace 横梁涡流检测信息管理系统
         //上方导航栏绑定面板
         void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
+            int barItemIndex = Navigation.ItemLinks.IndexOf(e.Link);
             navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }
 
