@@ -13,6 +13,7 @@ using System.Configuration;
 using 横梁涡流检测信息管理系统;
 using 横梁涡流检测信息管理系统.BaseInfManagement;
 using 横梁涡流检测信息管理系统.SystemSetting;
+using DevExpress.XtraBars.Navigation;
 
 namespace 横梁涡流检测信息管理系统
 {
@@ -37,6 +38,7 @@ namespace 横梁涡流检测信息管理系统
             this.WindowState = FormWindowState.Maximized;
             frmLogin = frm;
             this.Name = name;
+            officeNavigationBar.CustomizationButtonVisibility = CustomizationButtonVisibility.Hidden; ;
         }
 
         //下方导航栏绑定面板
@@ -92,6 +94,8 @@ namespace 横梁涡流检测信息管理系统
             btn.Click += new System.EventHandler(this.btn_Click);
             this.AcceptButton = btn;
         }
+
+
 
         private void btn_Click(object sender, EventArgs e)
         {

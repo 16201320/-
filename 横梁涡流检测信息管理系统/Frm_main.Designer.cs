@@ -236,7 +236,7 @@
             // 
             this.barButtonItem3.Caption = "录入";
             this.barButtonItem3.Id = 49;
-            this.barButtonItem3.ImageOptions.ImageUri.Uri = "AddItem";
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
@@ -244,21 +244,21 @@
             // 
             this.barButtonItem4.Caption = "修改";
             this.barButtonItem4.Id = 50;
-            this.barButtonItem4.ImageOptions.ImageUri.Uri = "Edit";
+            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
             // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "删除";
             this.barButtonItem5.Id = 51;
-            this.barButtonItem5.ImageOptions.ImageUri.Uri = "Delete";
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "更新";
             this.barButtonItem6.Id = 52;
-            this.barButtonItem6.ImageOptions.ImageUri.Uri = "Refresh";
+            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
             this.barButtonItem6.Name = "barButtonItem6";
             // 
             // barButtonItem10
@@ -323,18 +323,21 @@
             // 
             this.barButtonItem17.Caption = "修改密码";
             this.barButtonItem17.Id = 78;
+            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
             this.barButtonItem17.Name = "barButtonItem17";
             // 
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "账号管理";
             this.barButtonItem18.Id = 79;
+            this.barButtonItem18.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.LargeImage")));
             this.barButtonItem18.Name = "barButtonItem18";
             // 
             // barSubItem1
             // 
             this.barSubItem1.Caption = "数据库设置";
             this.barSubItem1.Id = 81;
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
@@ -363,6 +366,7 @@
             // 
             this.barButtonItem23.Caption = "帮助";
             this.barButtonItem23.Id = 87;
+            this.barButtonItem23.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.LargeImage")));
             this.barButtonItem23.Name = "barButtonItem23";
             // 
             // barButtonItem24
@@ -381,7 +385,7 @@
             // 
             this.Navigation.Caption = "导航";
             this.Navigation.Id = 90;
-            this.Navigation.ImageOptions.ImageUri.Uri = "NavigationBar";
+            this.Navigation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Navigation.ImageOptions.LargeImage")));
             this.Navigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem26),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem27),
@@ -421,7 +425,7 @@
             // 
             this.barButtonItem30.Caption = "打印";
             this.barButtonItem30.Id = 97;
-            this.barButtonItem30.ImageOptions.ImageUri.Uri = "Print";
+            this.barButtonItem30.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.ImageOptions.LargeImage")));
             this.barButtonItem30.Name = "barButtonItem30";
             // 
             // ribbonPage1
@@ -509,6 +513,7 @@
             // 
             // officeNavigationBar
             // 
+            this.officeNavigationBar.AutoSize = false;
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.officeNavigationBar.Location = new System.Drawing.Point(0, 736);
             this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -768,6 +773,7 @@
             this.Name = "Frm_main";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;
+            this.Text = "横梁涡流检测信息管理系统";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_main_FormClosed);
             this.Load += new System.EventHandler(this.Frm_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
