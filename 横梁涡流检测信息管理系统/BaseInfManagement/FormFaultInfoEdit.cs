@@ -99,6 +99,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             }
         }
 
+
                 private void labelControl16_Click(object sender, EventArgs e)
         {
 
