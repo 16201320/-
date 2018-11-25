@@ -70,9 +70,9 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -452,14 +452,6 @@
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "编辑";
             // 
-            // ribbonPageGroup
-            // 
-            this.ribbonPageGroup.AllowTextClipping = false;
-            this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem);
-            this.ribbonPageGroup.Name = "ribbonPageGroup";
-            this.ribbonPageGroup.ShowCaptionButton = false;
-            this.ribbonPageGroup.Text = "背景";
-            // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem30);
@@ -474,6 +466,14 @@
             this.ribbonPageGroup2});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "设置";
+            // 
+            // ribbonPageGroup
+            // 
+            this.ribbonPageGroup.AllowTextClipping = false;
+            this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem);
+            this.ribbonPageGroup.Name = "ribbonPageGroup";
+            this.ribbonPageGroup.ShowCaptionButton = false;
+            this.ribbonPageGroup.Text = "背景";
             // 
             // ribbonPageGroup5
             // 
@@ -543,6 +543,7 @@
             this.navBarControl.Size = new System.Drawing.Size(219, 552);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
+            this.navBarControl.Visible = false;
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
             // 
             // employeesNavBarGroup
