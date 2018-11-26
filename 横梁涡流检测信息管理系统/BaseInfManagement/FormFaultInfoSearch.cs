@@ -17,7 +17,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     {
         public string formName = "FormFaultInfoSearch";
         string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
-            ",dt.[Detection_Technology_NAME] as 检测技术, fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
+            ",dt.[Detection_Technology_NAME] as 检测技术 " +
+            " ,fi.[INCREASE] as 信号幅值, fi.[PHASE] as 信号相位, " +
+            " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
             " from FAULT_INFO fi " +
             "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
              "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
@@ -25,7 +27,6 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
            ;
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
-        DataGridViewCellCollection oneLineCarInfo = null;  //传递要要修改的单行数据
         public FormFaultInfoSearch()
         {
             InitializeComponent();
@@ -65,7 +66,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             try
             {
                 strOperationFlag = "add";
-                FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, oneLineCarInfo);
+                FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, null);
                 frm.Owner = this;
                 frm.ShowDialog();
 
@@ -85,30 +86,40 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount == 0)
+                if (this.gridView1.RowCount == 0 || this.gridView1.GetSelectedRows()[0] < 0)
                 {
                     MessageBox.Show("请选中要修改的行行");
                     return;
                 }
-                int selectedIndex = this.gridView1.GetSelectedRows()[0];
-                if (selectedIndex < 0)
+                strOperationFlag = "modify";
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("序号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString());
+                dic.Add("车型", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[1]).ToString());
+                dic.Add("列号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[2]).ToString());
+                dic.Add("修程", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[3]).ToString());
+                dic.Add("车号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[4]).ToString());
+                dic.Add("吊挂设备", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[5]).ToString());
+                dic.Add("检查时间", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[6]).ToString());
+                dic.Add("故障横梁号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[7]).ToString());
+                dic.Add("缺陷尖端距一位侧边梁", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[8]).ToString());
+                dic.Add("缺陷尖端距二位侧边梁", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[9]).ToString());
+                dic.Add("缺陷位置", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[10]).ToString());
+                dic.Add("缺陷长度", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[11]).ToString());
+                dic.Add("缺陷深度", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[12]).ToString());
+                dic.Add("是否贯穿", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[13]).ToString());
+                dic.Add("检测技术", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[14]).ToString());
+                dic.Add("信号幅值", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[15]).ToString());
+                dic.Add("信号相位", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[16]).ToString());
+                dic.Add("探伤工", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[17]).ToString());
+                dic.Add("班主长", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[18]).ToString());
+                dic.Add("录入人", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[19]).ToString());
+
+                FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, dic);
+                frm.Owner = this;
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
                 {
-                    MessageBox.Show("请选中要修改的行行");
-                    return;
-                }
-                else
-                {
-                    strOperationFlag = "modify";
-                    /*int a = gridView1.row
-                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    GridColumnCollection x = gridView1.Columns;
-                    FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, oneLineCarInfo, x);
-                    frm.Owner = this;
-                    frm.ShowDialog();
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-                        FreshForm();
-                    }
+                    FreshForm();
                 }
             }
             catch (System.Exception ex)
