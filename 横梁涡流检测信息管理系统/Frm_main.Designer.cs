@@ -105,6 +105,7 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -127,11 +128,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 789);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 799);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1053, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1055, 30);
             // 
             // ribbonControl
             // 
@@ -183,7 +184,7 @@
             this.ribbonPage3});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1053, 184);
+            this.ribbonControl.Size = new System.Drawing.Size(1055, 190);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -478,6 +479,7 @@
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             this.ribbonPageGroup.ShowCaptionButton = false;
             this.ribbonPageGroup.Text = "背景";
+            this.ribbonPageGroup.Visible = false;
             // 
             // ribbonPageGroup5
             // 
@@ -515,11 +517,11 @@
             // 
             this.officeNavigationBar.AutoSize = false;
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 736);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 746);
             this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(1053, 53);
+            this.officeNavigationBar.Size = new System.Drawing.Size(1055, 53);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -540,12 +542,12 @@
             this.navBarItem2,
             this.navBarItem3,
             this.navBarItem4});
-            this.navBarControl.Location = new System.Drawing.Point(0, 184);
+            this.navBarControl.Location = new System.Drawing.Point(0, 190);
             this.navBarControl.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 219;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(219, 552);
+            this.navBarControl.Size = new System.Drawing.Size(219, 556);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.Visible = false;
@@ -613,7 +615,7 @@
             this.navigationFrame.Controls.Add(this.navigationPage3);
             this.navigationFrame.Controls.Add(this.navigationPage4);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(219, 184);
+            this.navigationFrame.Location = new System.Drawing.Point(219, 190);
             this.navigationFrame.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
@@ -623,7 +625,7 @@
             this.navigationPage4});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(834, 552);
+            this.navigationFrame.Size = new System.Drawing.Size(836, 556);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -632,14 +634,14 @@
             this.employeesNavigationPage.Controls.Add(this.panelControl1);
             this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(834, 552);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(836, 556);
             // 
             // panelControl1
             // 
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(834, 552);
+            this.panelControl1.Size = new System.Drawing.Size(836, 556);
             this.panelControl1.TabIndex = 1;
             this.panelControl1.SizeChanged += new System.EventHandler(this.panelControl1_SizeChanged);
             // 
@@ -648,14 +650,14 @@
             this.customersNavigationPage.Controls.Add(this.panelControl2);
             this.customersNavigationPage.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(834, 552);
+            this.customersNavigationPage.Size = new System.Drawing.Size(836, 556);
             // 
             // panelControl2
             // 
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(834, 552);
+            this.panelControl2.Size = new System.Drawing.Size(836, 556);
             this.panelControl2.TabIndex = 0;
             this.panelControl2.SizeChanged += new System.EventHandler(this.panelControl2_SizeChanged);
             // 
@@ -663,14 +665,14 @@
             // 
             this.navigationPage3.Controls.Add(this.panelControl3);
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(834, 552);
+            this.navigationPage3.Size = new System.Drawing.Size(836, 556);
             // 
             // panelControl3
             // 
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(834, 552);
+            this.panelControl3.Size = new System.Drawing.Size(836, 556);
             this.panelControl3.TabIndex = 0;
             this.panelControl3.SizeChanged += new System.EventHandler(this.panelControl3_SizeChanged);
             // 
@@ -678,14 +680,14 @@
             // 
             this.navigationPage4.Controls.Add(this.panelControl4);
             this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(834, 552);
+            this.navigationPage4.Size = new System.Drawing.Size(836, 556);
             // 
             // panelControl4
             // 
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(834, 552);
+            this.panelControl4.Size = new System.Drawing.Size(836, 556);
             this.panelControl4.TabIndex = 0;
             this.panelControl4.SizeChanged += new System.EventHandler(this.panelControl4_SizeChanged);
             // 
@@ -759,11 +761,15 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
             this.barSubItem4.Name = "barSubItem4";
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2007 Blue";
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 829);
+            this.ClientSize = new System.Drawing.Size(1055, 829);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.navBarControl);
             this.Controls.Add(this.officeNavigationBar);
@@ -871,5 +877,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
