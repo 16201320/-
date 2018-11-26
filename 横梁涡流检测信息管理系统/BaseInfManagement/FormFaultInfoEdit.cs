@@ -78,12 +78,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 this.LENGTH.Text = oneLineCarInfo[11].ToString().Trim();
                 this.DEPTH.Text = oneLineCarInfo[13].ToString().Trim();
                 this.EQUIMENT_NAME.Text = oneLineCarInfo[12].ToString().Trim();
-                //this.PIC.Text = oneLineCarInfo[14].ToString().Trim();
-               // this.MEMO.Text = oneLineCarInfo[15].ToString().Trim();
+                this.PIC.Text = oneLineCarInfo[14].ToString().Trim();
+                this.MEMO.Text = oneLineCarInfo[15].ToString().Trim();
                 this.Detection_Technology_NAME.Text = oneLineCarInfo[16].ToString().Trim();
                 this.INCREASE.Text = oneLineCarInfo[17].ToString().Trim();
                 this.PHASE.Text = oneLineCarInfo[18].ToString().Trim();
-                /*this.FREQUENCY.Text = oneLineCarInfo[19].ToString().Trim();
+                this.FREQUENCY.Text = oneLineCarInfo[19].ToString().Trim();
                 this.FRONT.Text = oneLineCarInfo[20].ToString().Trim();
                 this.GAIN.Text = oneLineCarInfo[21].ToString().Trim();
                 this.GAIN_RATIO.Text = oneLineCarInfo[22].ToString().Trim();
@@ -92,10 +92,10 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 this.DIGITAL_FILTERING.Text = oneLineCarInfo[25].ToString().Trim();
                 this.ARTIFICIAL_DEFECT_LENGTH.Text = oneLineCarInfo[26].ToString().Trim();
                 this.ARTIFICIAL_DEFECT_WIDTH.Text = oneLineCarInfo[27].ToString().Trim();
-                this.ARTIFICIAL_DEFECT_HEIGHT.Text = oneLineCarInfo[28].ToString().Trim();*/
-               // this.INVESTIGATOR.Text = oneLineCarInfo[29].ToString().Trim();
-                //this.TEAM_LEADER.Text = oneLineCarInfo[30].ToString().Trim();
-                //this.ENTERING_PERSON.Text = oneLineCarInfo[31].ToString().Trim();
+                this.ARTIFICIAL_DEFECT_HEIGHT.Text = oneLineCarInfo[28].ToString().Trim();
+                this.INVESTIGATOR.Text = oneLineCarInfo[29].ToString().Trim();
+                this.TEAM_LEADER.Text = oneLineCarInfo[30].ToString().Trim();
+                this.ENTERING_PERSON.Text = oneLineCarInfo[31].ToString().Trim();
             }
         }
 
@@ -111,26 +111,6 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         }
 
         private void textEdit2_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CARNAME_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LATHE_NAME_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
 
         }
