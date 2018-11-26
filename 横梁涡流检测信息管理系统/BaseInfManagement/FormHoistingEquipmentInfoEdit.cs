@@ -12,20 +12,19 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 {
     public partial class FormHoistingEquipmentInfoEdit : Form
     {
-        //[EQUIMENT_ID] as 设备编号,  hi.[EQUIMENT_NAME] as 设备名称
-
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
-                                                 //string strUserId = string.Empty;  //修改时指示具体的行数据
-                                                 //bool strFlag = true; //用于判断控件是否填写了信息
-                                                 // FaultInfoDao dao = new FaultInfoDao();
-        string EQUIMENT_ID = "";
-        public FormHoistingEquipmentInfoEdit(string strOperationFlag, DataGridViewCellCollection oneLineCarInfo)
+        string EQUIMENT_ID = string.Empty;//修改时指示具体的行数据
+        public FormHoistingEquipmentInfoEdit(string strOperationFlag, Dictionary<string, string> dic)
         {
             InitializeComponent();
             if (strOperationFlag.Equals("modify"))
             {
-                /*this.EQUIMENT_ID = oneLineCarInfo["设备编号"].Value.ToString().Trim();
-                this.EQUIMENT_NAME.Text = oneLineCarInfo["设备名称"].Value.ToString().Trim();*/
+                this.EQUIMENT_ID = dic["设备编号"];
+                this.EQUIMENT_NAME.Text = dic["设备名称"];
+            }
+            else
+            {
+                this.EQUIMENT_NAME.Focus();
             }
         }
     }

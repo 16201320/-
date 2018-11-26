@@ -104,6 +104,8 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     /*int a = gridView1.row
                     oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
                     GridColumnCollection x = gridView1.Columns;
+
+
                     FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, oneLineCarInfo,x);
                     frm.Owner = this;
                     frm.ShowDialog();
