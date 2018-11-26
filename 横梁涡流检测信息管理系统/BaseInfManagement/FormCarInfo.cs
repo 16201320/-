@@ -161,23 +161,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                         MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
                         return;
                     }
-                    else
+                    if (MessageBox.Show("确认删除车型信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                     {
-                        if (MessageBox.Show("确认删除车型信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
-                        {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
-                            {
-                                MessageBox.Show("成功删除");
-                                FreshForm();
-                            }*/
-                        }
+                         LatheDao dao = new LatheDao();
+                        string LATHE_ID = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString();
+                         if (dao.delete(LATHE_ID))
+                         {
+                               FreshForm();
+                         }
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch 
             {
-                MessageBox.Show("删除失败，这条数据被其他数据所引用，请先删除使用了该数据的子信息！\n\n详细信息：\n" + ex.Message, "提示信息");
+                MessageBox.Show("删除失败，这个车型在被使用！\n");
                 return;
             }
         }
