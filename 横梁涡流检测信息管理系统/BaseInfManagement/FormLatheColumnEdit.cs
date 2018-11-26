@@ -19,12 +19,17 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             InitializeComponent();
             if (strOperationFlag.Equals("modify"))
             {
+                //设置窗口标题
+                this.Text = "修改车列信息";
+                //获取需要修改的信息
                 this.COLUMN_ID = dic["列号"];
                 this.COLUMN_NAME.Text = dic["列名称"];
             }
 
             else
             {
+                //设置窗口标题
+                this.Text = "添加车列信息";
                 this.COLUMN_NAME.Focus();
             }
         }

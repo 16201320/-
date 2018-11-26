@@ -128,10 +128,12 @@
     <Compile Include="BaseInfManagement\FormLatheInfoEdit.Designer.cs">
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dao\FaultInfoDao.cs" />
+    <Compile Include="Dao\LatheColumnDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
     <Compile Include="DataClass\SqlHelper.cs" />
     <Compile Include="Dao\LatheDao.cs" />
     <Compile Include="Dao\HoistingEquipmentInfoDao.cs" />
-    <Compile Include="Dao\RepairPRocessDao.cs" />
     <Compile Include="SystemSetting\DLLAdmin.cs" />
     <Compile Include="Frm_main.cs">
       <SubType>Form</SubType>
@@ -147,6 +149,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemSetting\ImageHelper.cs" />
     <EmbeddedResource Include="BaseInfManagement\FoemFaultStatistics.resx">
       <DependentUpon>FoemFaultStatistics.cs</DependentUpon>
     </EmbeddedResource>

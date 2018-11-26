@@ -819,7 +819,6 @@
             this.Controls.Add(this.groupControl2);
             this.Name = "FormFaultInfoEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormFaultInfoEdit";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
