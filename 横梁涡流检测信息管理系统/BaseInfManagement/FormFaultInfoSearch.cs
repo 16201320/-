@@ -16,7 +16,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     public partial class FormFaultInfoSearch : Form
     {
         public string formName = "FormFaultInfoSearch";
-        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
+        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁, fi.[DISTANCE1] as 一位侧距,fi.[DISTANCE2] as 二位侧距,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
             ",dt.[Detection_Technology_NAME] as 检测技术 " +
             " ,fi.[INCREASE] as 信号幅值, fi.[PHASE] as 信号相位, " +
             " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班组长, fi.[ENTERING_PERSON] as 录入人" +

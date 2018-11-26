@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFaultInfoSearch));
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit15 = new DevExpress.XtraEditors.CheckEdit();
             this.DEPTH = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit14 = new DevExpress.XtraEditors.CheckEdit();
@@ -48,11 +49,10 @@
             this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
             this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
-            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
             this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.详细信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缩略信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +60,6 @@
             this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
@@ -72,6 +71,7 @@
             this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
             this.COLUMN_NAME = new DevExpress.XtraEditors.TextEdit();
             this.LATHE_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).BeginInit();
@@ -92,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -111,12 +110,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
             // 
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.groupControl3.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImage")));
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Controls.Add(this.checkEdit15);
             this.groupControl3.Controls.Add(this.DEPTH);
@@ -137,158 +139,177 @@
             this.groupControl3.Controls.Add(this.checkEdit7);
             this.groupControl3.Controls.Add(this.DISTANCE1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 99);
+            this.groupControl3.Location = new System.Drawing.Point(2, 113);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1679, 131);
+            this.groupControl3.Size = new System.Drawing.Size(1679, 152);
             this.groupControl3.TabIndex = 3;
             this.groupControl3.Text = "故障信息";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.simpleButton1.Location = new System.Drawing.Point(1539, 70);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(130, 54);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "查找";
+            // 
             // checkEdit15
             // 
-            this.checkEdit15.Location = new System.Drawing.Point(582, 98);
+            this.checkEdit15.Location = new System.Drawing.Point(617, 108);
             this.checkEdit15.Name = "checkEdit15";
+            this.checkEdit15.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit15.Properties.Appearance.Options.UseFont = true;
             this.checkEdit15.Properties.Caption = "信号相位：";
-            this.checkEdit15.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit15.Size = new System.Drawing.Size(96, 25);
             this.checkEdit15.TabIndex = 13;
             // 
             // DEPTH
             // 
-            this.DEPTH.Location = new System.Drawing.Point(1264, 68);
+            this.DEPTH.Location = new System.Drawing.Point(1264, 78);
             this.DEPTH.Name = "DEPTH";
             this.DEPTH.Size = new System.Drawing.Size(185, 24);
             this.DEPTH.TabIndex = 28;
             // 
             // checkEdit14
             // 
-            this.checkEdit14.Location = new System.Drawing.Point(48, 97);
+            this.checkEdit14.Location = new System.Drawing.Point(48, 108);
             this.checkEdit14.Name = "checkEdit14";
+            this.checkEdit14.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit14.Properties.Appearance.Options.UseFont = true;
             this.checkEdit14.Properties.Caption = "信号幅值：";
-            this.checkEdit14.Size = new System.Drawing.Size(97, 22);
+            this.checkEdit14.Size = new System.Drawing.Size(97, 25);
             this.checkEdit14.TabIndex = 12;
             // 
             // FAULT_POSITION
             // 
-            this.FAULT_POSITION.Location = new System.Drawing.Point(172, 67);
+            this.FAULT_POSITION.Location = new System.Drawing.Point(172, 78);
             this.FAULT_POSITION.Name = "FAULT_POSITION";
             this.FAULT_POSITION.Size = new System.Drawing.Size(185, 24);
             this.FAULT_POSITION.TabIndex = 27;
             // 
             // checkEdit13
             // 
-            this.checkEdit13.Location = new System.Drawing.Point(1147, 68);
+            this.checkEdit13.Location = new System.Drawing.Point(1147, 79);
             this.checkEdit13.Name = "checkEdit13";
+            this.checkEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit13.Properties.Appearance.Options.UseFont = true;
             this.checkEdit13.Properties.Caption = "缺陷深度：";
-            this.checkEdit13.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit13.Size = new System.Drawing.Size(92, 25);
             this.checkEdit13.TabIndex = 11;
             // 
             // FAULT_BEAMID
             // 
-            this.FAULT_BEAMID.Location = new System.Drawing.Point(172, 40);
+            this.FAULT_BEAMID.Location = new System.Drawing.Point(172, 48);
             this.FAULT_BEAMID.Name = "FAULT_BEAMID";
             this.FAULT_BEAMID.Size = new System.Drawing.Size(185, 24);
             this.FAULT_BEAMID.TabIndex = 26;
             // 
             // checkEdit12
             // 
-            this.checkEdit12.Location = new System.Drawing.Point(582, 69);
+            this.checkEdit12.Location = new System.Drawing.Point(617, 77);
             this.checkEdit12.Name = "checkEdit12";
+            this.checkEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit12.Properties.Appearance.Options.UseFont = true;
             this.checkEdit12.Properties.Caption = "缺陷长度：";
-            this.checkEdit12.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit12.Size = new System.Drawing.Size(96, 25);
             this.checkEdit12.TabIndex = 10;
             // 
             // PHASE
             // 
-            this.PHASE.Location = new System.Drawing.Point(748, 97);
+            this.PHASE.Location = new System.Drawing.Point(748, 109);
             this.PHASE.Name = "PHASE";
             this.PHASE.Size = new System.Drawing.Size(185, 24);
             this.PHASE.TabIndex = 25;
             // 
             // checkEdit11
             // 
-            this.checkEdit11.Location = new System.Drawing.Point(50, 69);
+            this.checkEdit11.Location = new System.Drawing.Point(50, 77);
             this.checkEdit11.Name = "checkEdit11";
+            this.checkEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit11.Properties.Appearance.Options.UseFont = true;
             this.checkEdit11.Properties.Caption = "缺陷位置：";
-            this.checkEdit11.Size = new System.Drawing.Size(90, 22);
+            this.checkEdit11.Size = new System.Drawing.Size(90, 25);
             this.checkEdit11.TabIndex = 9;
             // 
             // LENGTH
             // 
-            this.LENGTH.Location = new System.Drawing.Point(748, 70);
+            this.LENGTH.Location = new System.Drawing.Point(748, 78);
             this.LENGTH.Name = "LENGTH";
             this.LENGTH.Size = new System.Drawing.Size(185, 24);
             this.LENGTH.TabIndex = 24;
             // 
             // checkEdit10
             // 
-            this.checkEdit10.Location = new System.Drawing.Point(1147, 41);
+            this.checkEdit10.Location = new System.Drawing.Point(1147, 49);
             this.checkEdit10.Name = "checkEdit10";
+            this.checkEdit10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit10.Properties.Appearance.Options.UseFont = true;
             this.checkEdit10.Properties.Caption = "二位侧距：";
-            this.checkEdit10.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit10.Size = new System.Drawing.Size(96, 25);
             this.checkEdit10.TabIndex = 8;
             // 
             // DISTANCE2
             // 
-            this.DISTANCE2.Location = new System.Drawing.Point(1264, 41);
+            this.DISTANCE2.Location = new System.Drawing.Point(1264, 48);
             this.DISTANCE2.Name = "DISTANCE2";
             this.DISTANCE2.Size = new System.Drawing.Size(185, 24);
             this.DISTANCE2.TabIndex = 23;
             // 
             // checkEdit9
             // 
-            this.checkEdit9.Location = new System.Drawing.Point(579, 43);
+            this.checkEdit9.Location = new System.Drawing.Point(617, 49);
             this.checkEdit9.Name = "checkEdit9";
+            this.checkEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit9.Properties.Appearance.Options.UseFont = true;
             this.checkEdit9.Properties.Caption = "一位侧距：";
-            this.checkEdit9.Size = new System.Drawing.Size(99, 22);
+            this.checkEdit9.Size = new System.Drawing.Size(99, 25);
             this.checkEdit9.TabIndex = 7;
             // 
             // INCREASE
             // 
-            this.INCREASE.Location = new System.Drawing.Point(172, 96);
+            this.INCREASE.Location = new System.Drawing.Point(172, 109);
             this.INCREASE.Name = "INCREASE";
             this.INCREASE.Size = new System.Drawing.Size(185, 24);
             this.INCREASE.TabIndex = 20;
             // 
             // checkEdit8
             // 
-            this.checkEdit8.Location = new System.Drawing.Point(1147, 96);
+            this.checkEdit8.Location = new System.Drawing.Point(1147, 108);
             this.checkEdit8.Name = "checkEdit8";
+            this.checkEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit8.Properties.Appearance.Options.UseFont = true;
             this.checkEdit8.Properties.Caption = "是否贯穿：";
-            this.checkEdit8.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit8.Size = new System.Drawing.Size(92, 25);
             this.checkEdit8.TabIndex = 6;
             // 
             // IF_PENETRATION
             // 
-            this.IF_PENETRATION.Location = new System.Drawing.Point(1264, 98);
+            this.IF_PENETRATION.Location = new System.Drawing.Point(1264, 107);
             this.IF_PENETRATION.Name = "IF_PENETRATION";
             this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
             this.IF_PENETRATION.TabIndex = 19;
             // 
             // checkEdit7
             // 
-            this.checkEdit7.Location = new System.Drawing.Point(49, 41);
+            this.checkEdit7.Location = new System.Drawing.Point(49, 46);
             this.checkEdit7.Name = "checkEdit7";
+            this.checkEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit7.Properties.Appearance.Options.UseFont = true;
             this.checkEdit7.Properties.Caption = "故障横梁：";
-            this.checkEdit7.Size = new System.Drawing.Size(114, 22);
+            this.checkEdit7.Size = new System.Drawing.Size(114, 25);
             this.checkEdit7.TabIndex = 5;
             // 
             // DISTANCE1
             // 
-            this.DISTANCE1.Location = new System.Drawing.Point(748, 41);
+            this.DISTANCE1.Location = new System.Drawing.Point(748, 48);
             this.DISTANCE1.Name = "DISTANCE1";
             this.DISTANCE1.Size = new System.Drawing.Size(185, 24);
             this.DISTANCE1.TabIndex = 18;
             // 
-            // checkEdit6
-            // 
-            this.checkEdit6.Location = new System.Drawing.Point(1147, 67);
-            this.checkEdit6.Name = "checkEdit6";
-            this.checkEdit6.Properties.Caption = "检查时间：";
-            this.checkEdit6.Size = new System.Drawing.Size(96, 22);
-            this.checkEdit6.TabIndex = 4;
-            // 
             // CHECK_TM
             // 
-            this.CHECK_TM.Location = new System.Drawing.Point(1264, 65);
+            this.CHECK_TM.Location = new System.Drawing.Point(1264, 70);
             this.CHECK_TM.Name = "CHECK_TM";
             this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
             this.CHECK_TM.TabIndex = 17;
@@ -309,10 +330,10 @@
             // 
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 230);
+            this.gridControl1.Location = new System.Drawing.Point(2, 265);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1679, 649);
+            this.gridControl1.Size = new System.Drawing.Size(1679, 614);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -374,27 +395,28 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton1.Location = new System.Drawing.Point(1539, 70);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(130, 54);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "查找";
             // 
             // groupControl2
             // 
             this.groupControl2.Appearance.Font = new System.Drawing.Font("黑体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
             this.groupControl2.Appearance.Options.UseFont = true;
             this.groupControl2.Appearance.Options.UseTextOptions = true;
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.groupControl2.Controls.Add(this.checkEdit5);
             this.groupControl2.Controls.Add(this.checkEdit2);
             this.groupControl2.Controls.Add(this.checkEdit4);
@@ -410,84 +432,104 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1679, 97);
+            this.groupControl2.Size = new System.Drawing.Size(1679, 111);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "列车信息";
             // 
             // checkEdit5
             // 
-            this.checkEdit5.Location = new System.Drawing.Point(579, 70);
+            this.checkEdit5.Location = new System.Drawing.Point(617, 71);
             this.checkEdit5.Name = "checkEdit5";
+            this.checkEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit5.Properties.Appearance.Options.UseFont = true;
             this.checkEdit5.Properties.Caption = "吊挂设备：";
-            this.checkEdit5.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit5.Size = new System.Drawing.Size(113, 25);
             this.checkEdit5.TabIndex = 7;
             // 
             // checkEdit2
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(579, 42);
+            this.checkEdit2.Location = new System.Drawing.Point(617, 44);
             this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "列      号：";
-            this.checkEdit2.Size = new System.Drawing.Size(89, 22);
+            this.checkEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit2.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit2.Properties.Caption = "列       号：";
+            this.checkEdit2.Size = new System.Drawing.Size(113, 25);
             this.checkEdit2.TabIndex = 4;
             // 
             // checkEdit4
             // 
             this.checkEdit4.Location = new System.Drawing.Point(49, 66);
             this.checkEdit4.Name = "checkEdit4";
+            this.checkEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit4.Properties.Appearance.Options.UseFont = true;
             this.checkEdit4.Properties.Caption = "车      号：";
-            this.checkEdit4.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit4.Size = new System.Drawing.Size(96, 25);
             this.checkEdit4.TabIndex = 6;
             // 
             // checkEdit1
             // 
             this.checkEdit1.Location = new System.Drawing.Point(50, 39);
             this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
             this.checkEdit1.Properties.Caption = "车      型：";
-            this.checkEdit1.Size = new System.Drawing.Size(95, 22);
+            this.checkEdit1.Size = new System.Drawing.Size(95, 25);
             this.checkEdit1.TabIndex = 3;
             // 
             // checkEdit3
             // 
-            this.checkEdit3.Location = new System.Drawing.Point(1147, 37);
+            this.checkEdit3.Location = new System.Drawing.Point(1145, 42);
             this.checkEdit3.Name = "checkEdit3";
-            this.checkEdit3.Properties.Caption = "修      程：";
-            this.checkEdit3.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit3.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit3.Properties.Caption = "修       程：";
+            this.checkEdit3.Size = new System.Drawing.Size(113, 25);
             this.checkEdit3.TabIndex = 5;
             // 
             // EQUIMENT_NAME
             // 
-            this.EQUIMENT_NAME.Location = new System.Drawing.Point(748, 65);
+            this.EQUIMENT_NAME.Location = new System.Drawing.Point(748, 70);
             this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
             this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
             this.EQUIMENT_NAME.TabIndex = 17;
             // 
             // CARNAME
             // 
-            this.CARNAME.Location = new System.Drawing.Point(172, 66);
+            this.CARNAME.Location = new System.Drawing.Point(172, 70);
             this.CARNAME.Name = "CARNAME";
             this.CARNAME.Size = new System.Drawing.Size(185, 24);
             this.CARNAME.TabIndex = 16;
             // 
             // REPAIR_NAME
             // 
-            this.REPAIR_NAME.Location = new System.Drawing.Point(1264, 37);
+            this.REPAIR_NAME.Location = new System.Drawing.Point(1264, 43);
             this.REPAIR_NAME.Name = "REPAIR_NAME";
             this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
             this.REPAIR_NAME.TabIndex = 15;
             // 
             // COLUMN_NAME
             // 
-            this.COLUMN_NAME.Location = new System.Drawing.Point(748, 35);
+            this.COLUMN_NAME.Location = new System.Drawing.Point(748, 43);
             this.COLUMN_NAME.Name = "COLUMN_NAME";
             this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
             this.COLUMN_NAME.TabIndex = 14;
             // 
             // LATHE_NAME
             // 
-            this.LATHE_NAME.Location = new System.Drawing.Point(172, 38);
+            this.LATHE_NAME.Location = new System.Drawing.Point(172, 41);
             this.LATHE_NAME.Name = "LATHE_NAME";
             this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
             this.LATHE_NAME.TabIndex = 13;
+            // 
+            // checkEdit6
+            // 
+            this.checkEdit6.Location = new System.Drawing.Point(1145, 68);
+            this.checkEdit6.Name = "checkEdit6";
+            this.checkEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.checkEdit6.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit6.Properties.Caption = "检查时间：";
+            this.checkEdit6.Size = new System.Drawing.Size(113, 25);
+            this.checkEdit6.TabIndex = 4;
             // 
             // FormFaultInfoSearch
             // 
@@ -517,7 +559,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -536,6 +577,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,7 +605,6 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit9;
         private DevExpress.XtraEditors.CheckEdit checkEdit8;
         private DevExpress.XtraEditors.CheckEdit checkEdit7;
-        private DevExpress.XtraEditors.CheckEdit checkEdit6;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.CheckEdit checkEdit5;
         private DevExpress.XtraEditors.CheckEdit checkEdit2;
@@ -585,5 +626,6 @@
         private System.Windows.Forms.ToolStripMenuItem 显示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 详细信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 缩略信息ToolStripMenuItem;
+        private DevExpress.XtraEditors.CheckEdit checkEdit6;
     }
 }
