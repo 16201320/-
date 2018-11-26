@@ -19,19 +19,24 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         string list2 = "select lc.[COLUMN_ID] as 列编号,   lc.[COLUMN_NAME] as 列号 from LATHE_COLUMN lc ";
         string list3 = "select hi.[EQUIMENT_ID] as 设备编号,  hi.[EQUIMENT_NAME] as 吊挂设备 from HOISTINGEQUIPMENT_INFO hi ";
         string list4 = "select dt.[DetectionTechnology_ID] as 检测技术编号,   dt.[Detection_Technology_NAME] as 检测技术 from DETECTION_TECHNOLOGY dt ";
-        DataSet ds = new DataSet();
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
-        DataGridViewCellCollection oneLineCarInfo = null;  //传递要要修改的单行数据
         public FormCarInfo()
         {
             InitializeComponent();
+            //设置这个窗口可以嵌入到其他窗口里面
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopLevel = false;
+
+            //设置gridcontrol表头提示为空
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
+
+            //显示所有信息
             FreshForm();
+
+
             //行高22
             gridView1.RowHeight = 32;
             //不允许编辑
@@ -104,10 +109,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             try
             {
                 strOperationFlag = "add";
-                FormLatheInfoEdit frm = new FormLatheInfoEdit(strOperationFlag, oneLineCarInfo);
+                FormLatheInfoEdit frm = new FormLatheInfoEdit(strOperationFlag, null);
                 frm.Owner = this;
                 frm.ShowDialog();
-
                 if (frm.DialogResult == DialogResult.OK)
                 {
                     FreshForm();
@@ -124,30 +128,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount == 0)
+                if (this.gridView1.RowCount == 0  || this.gridView1.GetSelectedRows()[0] < 0)
                 {
                     MessageBox.Show("请选中要修改的行");
                     return;
                 }
-                int selectedIndex = this.gridView1.GetSelectedRows()[0];
-                if (selectedIndex < 0)
-                {
-                    MessageBox.Show("请选中要修改的行");
-                    return;
-                }
-                else
-                {
-                    strOperationFlag = "modify";
-                    /*int a = gridView1.row
-                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    FormLatheInfoEdit frm = new FormLatheInfoEdit(strOperationFlag, oneLineCarInfo);
-                    frm.Owner = this;
-                    frm.ShowDialog();
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-                        FreshForm();
-                    }
-                }
+                strOperationFlag = "modify";
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("车型编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString());
+                dic.Add("车型名称", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[1]).ToString());
+                FormLatheInfoEdit frm = new FormLatheInfoEdit(strOperationFlag, dic);
+                frm.Owner = this;
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                    FreshForm();
             }
             catch (System.Exception ex)
             {
@@ -193,10 +187,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             try
             {
                 strOperationFlag = "add";
-                FormLatheColumnEdit frm = new FormLatheColumnEdit(strOperationFlag, oneLineCarInfo);
+                FormLatheColumnEdit frm = new FormLatheColumnEdit(strOperationFlag, null);
                 frm.Owner = this;
                 frm.ShowDialog();
-
                 if (frm.DialogResult == DialogResult.OK)
                 {
                     FreshForm();
@@ -213,30 +206,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount == 0)
+                if (this.gridView2.RowCount == 0 || this.gridView2.GetSelectedRows()[0] < 0)
                 {
                     MessageBox.Show("请选中要修改的行");
                     return;
                 }
-                int selectedIndex = this.gridView1.GetSelectedRows()[0];
-                if (selectedIndex < 0)
-                {
-                    MessageBox.Show("请选中要修改的行");
-                    return;
-                }
-                else
-                {
-                    strOperationFlag = "modify";
-                    /*int a = gridView1.row
-                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    FormLatheColumnEdit frm = new FormLatheColumnEdit(strOperationFlag, oneLineCarInfo);
-                    frm.Owner = this;
-                    frm.ShowDialog();
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-                        FreshForm();
-                    }
-                }
+                strOperationFlag = "modify";
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("列号", this.gridView2.GetRowCellValue(this.gridView2.FocusedRowHandle, this.gridView2.Columns[0]).ToString());
+                dic.Add("列名称", this.gridView2.GetRowCellValue(this.gridView2.FocusedRowHandle, this.gridView2.Columns[1]).ToString());
+                FormLatheColumnEdit frm = new FormLatheColumnEdit(strOperationFlag, dic);
+                frm.Owner = this;
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                    FreshForm();
             }
             catch (System.Exception ex)
             {
@@ -283,7 +266,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             try
             {
                 strOperationFlag = "add";
-                FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, oneLineCarInfo);
+                FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, null);
                 frm.Owner = this;
                 frm.ShowDialog();
 
@@ -303,30 +286,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount == 0)
+                if (this.gridView3.RowCount == 0 || this.gridView3.GetSelectedRows()[0] < 0)
                 {
-                    MessageBox.Show("请选中要修改的行行");
+                    MessageBox.Show("请选中要修改的行");
                     return;
                 }
-                int selectedIndex = this.gridView1.GetSelectedRows()[0];
-                if (selectedIndex < 0)
-                {
-                    MessageBox.Show("请选中要修改的行行");
-                    return;
-                }
-                else
-                {
-                    strOperationFlag = "modify";
-                    /*int a = gridView1.row
-                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, oneLineCarInfo);
-                    frm.Owner = this;
-                    frm.ShowDialog();
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-                        FreshForm();
-                    }
-                }
+                strOperationFlag = "modify";
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("设备编号", this.gridView3.GetRowCellValue(this.gridView3.FocusedRowHandle, this.gridView3.Columns[0]).ToString());
+                dic.Add("设备名称", this.gridView3.GetRowCellValue(this.gridView3.FocusedRowHandle, this.gridView3.Columns[1]).ToString());
+                FormHoistingEquipmentInfoEdit frm = new FormHoistingEquipmentInfoEdit(strOperationFlag, dic);
+                frm.Owner = this;
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                    FreshForm();
             }
             catch (System.Exception ex)
             {
@@ -372,7 +345,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             try
             {
                 strOperationFlag = "add";
-                FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, oneLineCarInfo);
+                FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, null);
                 frm.Owner = this;
                 frm.ShowDialog();
 
@@ -392,30 +365,20 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount == 0)
+                if (this.gridView4.RowCount == 0 || this.gridView4.GetSelectedRows()[0] < 0)
                 {
-                    MessageBox.Show("请选中要修改的行行");
+                    MessageBox.Show("请选中要修改的行");
                     return;
                 }
-                int selectedIndex = this.gridView1.GetSelectedRows()[0];
-                if (selectedIndex < 0)
-                {
-                    MessageBox.Show("请选中要修改的行行");
-                    return;
-                }
-                else
-                {
-                    strOperationFlag = "modify";
-                    /*int a = gridView1.row
-                    oneLineCarInfo = this.gridView1.rows.GetRowCellValue(selectedIndex);*/
-                    FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, oneLineCarInfo);
-                    frm.Owner = this;
-                    frm.ShowDialog();
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-                        FreshForm();
-                    }
-                }
+                strOperationFlag = "modify";
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("检测技术编号", this.gridView4.GetRowCellValue(this.gridView4.FocusedRowHandle, this.gridView4.Columns[0]).ToString());
+                dic.Add("检测技术名称", this.gridView4.GetRowCellValue(this.gridView4.FocusedRowHandle, this.gridView4.Columns[1]).ToString());
+                FormDETECTION_TECHNOLOGYInfoEdit frm = new FormDETECTION_TECHNOLOGYInfoEdit(strOperationFlag, dic);
+                frm.Owner = this;
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                    FreshForm();
             }
             catch (System.Exception ex)
             {
