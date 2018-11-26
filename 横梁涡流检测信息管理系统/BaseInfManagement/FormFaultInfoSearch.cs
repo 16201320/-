@@ -16,14 +16,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     public partial class FormFaultInfoSearch : Form
     {
         public string formName = "FormFaultInfoSearch";
-        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度, fi.[IF_PENETRATION] as 是否贯穿 " +
-           ",dt.[Detection_Technology_NAME] as 检测技术, fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
-           " from FAULT_INFO fi " +
-           "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
-            "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
-            "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
-           "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
-          ;
+        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁号, fi.[DISTANCE1] as 缺陷尖端距一位侧边梁,fi.[DISTANCE2] as 缺陷尖端距二位侧边梁,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
+            ",dt.[Detection_Technology_NAME] as 检测技术, fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班主长, fi.[ENTERING_PERSON] as 录入人" +
+            " from FAULT_INFO fi " +
+            "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
+             "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
+             "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
+            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
+           ;
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         DataGridViewCellCollection oneLineCarInfo = null;  //传递要要修改的单行数据
         public FormFaultInfoSearch()
@@ -41,12 +41,6 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridView1.OptionsCustomization.AllowColumnMoving = false;
             //不显示右键菜单
             gridView1.OptionsMenu.EnableColumnMenu = false;
-            //隐藏细节信息
-            for(int i=6;i< gridView1.Columns.Count;i++)
-            {
-                gridView1.Columns[i].Visible = false;
-            }
-            this.详细信息ToolStripMenuItem.PerformClick();
         }
 
         //设置面板信息

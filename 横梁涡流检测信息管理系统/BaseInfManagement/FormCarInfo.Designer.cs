@@ -143,7 +143,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(1488, 36);
+            this.simpleButton2.Location = new System.Drawing.Point(1515, 36);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 13;
@@ -151,14 +151,14 @@
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(1373, 37);
+            this.textEdit4.Location = new System.Drawing.Point(1402, 37);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(100, 24);
             this.textEdit4.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(1284, 40);
+            this.labelControl4.Location = new System.Drawing.Point(1320, 40);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(65, 18);
             this.labelControl4.TabIndex = 11;
@@ -166,7 +166,7 @@
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(1044, 36);
+            this.simpleButton5.Location = new System.Drawing.Point(1088, 40);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 10;
@@ -174,7 +174,7 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(580, 37);
+            this.simpleButton3.Location = new System.Drawing.Point(615, 35);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 8;
@@ -190,14 +190,14 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(923, 37);
+            this.textEdit3.Location = new System.Drawing.Point(957, 39);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(100, 24);
             this.textEdit3.TabIndex = 5;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(459, 37);
+            this.textEdit2.Location = new System.Drawing.Point(495, 37);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(100, 24);
             this.textEdit2.TabIndex = 4;
@@ -211,7 +211,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(839, 42);
+            this.labelControl3.Location = new System.Drawing.Point(874, 42);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 18);
             this.labelControl3.TabIndex = 2;
@@ -219,7 +219,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(396, 41);
+            this.labelControl2.Location = new System.Drawing.Point(416, 43);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(35, 18);
             this.labelControl2.TabIndex = 1;
@@ -280,10 +280,10 @@
             // 
             this.gridControl4.ContextMenuStrip = this.contextMenuStrip4;
             this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.Location = new System.Drawing.Point(1284, 2);
+            this.gridControl4.Location = new System.Drawing.Point(1320, 2);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(309, 623);
+            this.gridControl4.Size = new System.Drawing.Size(273, 623);
             this.gridControl4.TabIndex = 3;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -329,10 +329,10 @@
             // 
             this.gridControl3.ContextMenuStrip = this.contextMenuStrip3;
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gridControl3.Location = new System.Drawing.Point(839, 2);
+            this.gridControl3.Location = new System.Drawing.Point(874, 2);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(445, 623);
+            this.gridControl3.Size = new System.Drawing.Size(446, 623);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -378,10 +378,10 @@
             // 
             this.gridControl2.ContextMenuStrip = this.contextMenuStrip2;
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gridControl2.Location = new System.Drawing.Point(396, 2);
+            this.gridControl2.Location = new System.Drawing.Point(416, 2);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(443, 623);
+            this.gridControl2.Size = new System.Drawing.Size(458, 623);
             this.gridControl2.TabIndex = 4;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -399,7 +399,7 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(394, 623);
+            this.gridControl1.Size = new System.Drawing.Size(414, 623);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

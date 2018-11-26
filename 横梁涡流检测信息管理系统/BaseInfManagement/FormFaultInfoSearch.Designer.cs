@@ -30,90 +30,90 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit14 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.checkEdit15 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit11 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit12 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
-            this.LATHE_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.COLUMN_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
-            this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
-            this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
-            this.INCREASE = new DevExpress.XtraEditors.TextEdit();
-            this.DISTANCE2 = new DevExpress.XtraEditors.TextEdit();
-            this.LENGTH = new DevExpress.XtraEditors.TextEdit();
-            this.PHASE = new DevExpress.XtraEditors.TextEdit();
-            this.FAULT_BEAMID = new DevExpress.XtraEditors.TextEdit();
-            this.FAULT_POSITION = new DevExpress.XtraEditors.TextEdit();
             this.DEPTH = new DevExpress.XtraEditors.TextEdit();
-            this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.CARNAME = new DevExpress.XtraEditors.TextEdit();
-            this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.checkEdit14 = new DevExpress.XtraEditors.CheckEdit();
+            this.FAULT_POSITION = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
+            this.FAULT_BEAMID = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit12 = new DevExpress.XtraEditors.CheckEdit();
+            this.PHASE = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit11 = new DevExpress.XtraEditors.CheckEdit();
+            this.LENGTH = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
+            this.DISTANCE2 = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
+            this.INCREASE = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
+            this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
+            this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
+            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
+            this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.详细信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缩略信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
+            this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.CARNAME = new DevExpress.XtraEditors.TextEdit();
+            this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.COLUMN_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.LATHE_NAME = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -138,14 +138,162 @@
             this.groupControl3.Controls.Add(this.IF_PENETRATION);
             this.groupControl3.Controls.Add(this.checkEdit7);
             this.groupControl3.Controls.Add(this.DISTANCE1);
-            this.groupControl3.Controls.Add(this.checkEdit6);
-            this.groupControl3.Controls.Add(this.CHECK_TM);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(2, 124);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1491, 160);
+            this.groupControl3.Size = new System.Drawing.Size(1491, 131);
             this.groupControl3.TabIndex = 3;
             this.groupControl3.Text = "故障信息";
+            // 
+            // checkEdit15
+            // 
+            this.checkEdit15.Location = new System.Drawing.Point(582, 98);
+            this.checkEdit15.Name = "checkEdit15";
+            this.checkEdit15.Properties.Caption = "信号相位：";
+            this.checkEdit15.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit15.TabIndex = 13;
+            // 
+            // DEPTH
+            // 
+            this.DEPTH.Location = new System.Drawing.Point(1264, 68);
+            this.DEPTH.Name = "DEPTH";
+            this.DEPTH.Size = new System.Drawing.Size(185, 24);
+            this.DEPTH.TabIndex = 28;
+            // 
+            // checkEdit14
+            // 
+            this.checkEdit14.Location = new System.Drawing.Point(48, 97);
+            this.checkEdit14.Name = "checkEdit14";
+            this.checkEdit14.Properties.Caption = "信号幅值：";
+            this.checkEdit14.Size = new System.Drawing.Size(97, 22);
+            this.checkEdit14.TabIndex = 12;
+            // 
+            // FAULT_POSITION
+            // 
+            this.FAULT_POSITION.Location = new System.Drawing.Point(172, 67);
+            this.FAULT_POSITION.Name = "FAULT_POSITION";
+            this.FAULT_POSITION.Size = new System.Drawing.Size(185, 24);
+            this.FAULT_POSITION.TabIndex = 27;
+            // 
+            // checkEdit13
+            // 
+            this.checkEdit13.Location = new System.Drawing.Point(1147, 68);
+            this.checkEdit13.Name = "checkEdit13";
+            this.checkEdit13.Properties.Caption = "缺陷深度：";
+            this.checkEdit13.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit13.TabIndex = 11;
+            // 
+            // FAULT_BEAMID
+            // 
+            this.FAULT_BEAMID.Location = new System.Drawing.Point(172, 40);
+            this.FAULT_BEAMID.Name = "FAULT_BEAMID";
+            this.FAULT_BEAMID.Size = new System.Drawing.Size(185, 24);
+            this.FAULT_BEAMID.TabIndex = 26;
+            // 
+            // checkEdit12
+            // 
+            this.checkEdit12.Location = new System.Drawing.Point(582, 69);
+            this.checkEdit12.Name = "checkEdit12";
+            this.checkEdit12.Properties.Caption = "缺陷长度：";
+            this.checkEdit12.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit12.TabIndex = 10;
+            // 
+            // PHASE
+            // 
+            this.PHASE.Location = new System.Drawing.Point(748, 97);
+            this.PHASE.Name = "PHASE";
+            this.PHASE.Size = new System.Drawing.Size(185, 24);
+            this.PHASE.TabIndex = 25;
+            // 
+            // checkEdit11
+            // 
+            this.checkEdit11.Location = new System.Drawing.Point(50, 69);
+            this.checkEdit11.Name = "checkEdit11";
+            this.checkEdit11.Properties.Caption = "缺陷位置：";
+            this.checkEdit11.Size = new System.Drawing.Size(90, 22);
+            this.checkEdit11.TabIndex = 9;
+            // 
+            // LENGTH
+            // 
+            this.LENGTH.Location = new System.Drawing.Point(748, 70);
+            this.LENGTH.Name = "LENGTH";
+            this.LENGTH.Size = new System.Drawing.Size(185, 24);
+            this.LENGTH.TabIndex = 24;
+            // 
+            // checkEdit10
+            // 
+            this.checkEdit10.Location = new System.Drawing.Point(1147, 41);
+            this.checkEdit10.Name = "checkEdit10";
+            this.checkEdit10.Properties.Caption = "二位侧距：";
+            this.checkEdit10.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit10.TabIndex = 8;
+            // 
+            // DISTANCE2
+            // 
+            this.DISTANCE2.Location = new System.Drawing.Point(1264, 41);
+            this.DISTANCE2.Name = "DISTANCE2";
+            this.DISTANCE2.Size = new System.Drawing.Size(185, 24);
+            this.DISTANCE2.TabIndex = 23;
+            // 
+            // checkEdit9
+            // 
+            this.checkEdit9.Location = new System.Drawing.Point(579, 43);
+            this.checkEdit9.Name = "checkEdit9";
+            this.checkEdit9.Properties.Caption = "一位侧距：";
+            this.checkEdit9.Size = new System.Drawing.Size(99, 22);
+            this.checkEdit9.TabIndex = 7;
+            // 
+            // INCREASE
+            // 
+            this.INCREASE.Location = new System.Drawing.Point(172, 96);
+            this.INCREASE.Name = "INCREASE";
+            this.INCREASE.Size = new System.Drawing.Size(185, 24);
+            this.INCREASE.TabIndex = 20;
+            // 
+            // checkEdit8
+            // 
+            this.checkEdit8.Location = new System.Drawing.Point(1147, 96);
+            this.checkEdit8.Name = "checkEdit8";
+            this.checkEdit8.Properties.Caption = "是否贯穿：";
+            this.checkEdit8.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit8.TabIndex = 6;
+            // 
+            // IF_PENETRATION
+            // 
+            this.IF_PENETRATION.Location = new System.Drawing.Point(1264, 98);
+            this.IF_PENETRATION.Name = "IF_PENETRATION";
+            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
+            this.IF_PENETRATION.TabIndex = 19;
+            // 
+            // checkEdit7
+            // 
+            this.checkEdit7.Location = new System.Drawing.Point(49, 41);
+            this.checkEdit7.Name = "checkEdit7";
+            this.checkEdit7.Properties.Caption = "故障横梁：";
+            this.checkEdit7.Size = new System.Drawing.Size(114, 22);
+            this.checkEdit7.TabIndex = 5;
+            // 
+            // DISTANCE1
+            // 
+            this.DISTANCE1.Location = new System.Drawing.Point(748, 41);
+            this.DISTANCE1.Name = "DISTANCE1";
+            this.DISTANCE1.Size = new System.Drawing.Size(185, 24);
+            this.DISTANCE1.TabIndex = 18;
+            // 
+            // checkEdit6
+            // 
+            this.checkEdit6.Location = new System.Drawing.Point(1147, 67);
+            this.checkEdit6.Name = "checkEdit6";
+            this.checkEdit6.Properties.Caption = "检查时间：";
+            this.checkEdit6.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit6.TabIndex = 4;
+            // 
+            // CHECK_TM
+            // 
+            this.CHECK_TM.Location = new System.Drawing.Point(1264, 65);
+            this.CHECK_TM.Name = "CHECK_TM";
+            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
+            this.CHECK_TM.TabIndex = 17;
             // 
             // groupControl1
             // 
@@ -160,291 +308,17 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "故障信息查询";
             // 
-            // checkEdit6
-            // 
-            this.checkEdit6.Location = new System.Drawing.Point(50, 47);
-            this.checkEdit6.Name = "checkEdit6";
-            this.checkEdit6.Properties.Caption = "检查时间：";
-            this.checkEdit6.Size = new System.Drawing.Size(96, 22);
-            this.checkEdit6.TabIndex = 4;
-            // 
-            // checkEdit7
-            // 
-            this.checkEdit7.Location = new System.Drawing.Point(603, 48);
-            this.checkEdit7.Name = "checkEdit7";
-            this.checkEdit7.Properties.Caption = "故障横梁号：";
-            this.checkEdit7.Size = new System.Drawing.Size(114, 22);
-            this.checkEdit7.TabIndex = 5;
-            // 
-            // checkEdit8
-            // 
-            this.checkEdit8.Location = new System.Drawing.Point(1168, 48);
-            this.checkEdit8.Name = "checkEdit8";
-            this.checkEdit8.Properties.Caption = "是否贯穿：";
-            this.checkEdit8.Size = new System.Drawing.Size(92, 22);
-            this.checkEdit8.TabIndex = 6;
-            // 
-            // checkEdit9
-            // 
-            this.checkEdit9.Location = new System.Drawing.Point(48, 75);
-            this.checkEdit9.Name = "checkEdit9";
-            this.checkEdit9.Properties.Caption = "缺陷尖端距一位侧边梁：";
-            this.checkEdit9.Size = new System.Drawing.Size(189, 22);
-            this.checkEdit9.TabIndex = 7;
-            // 
-            // checkEdit10
-            // 
-            this.checkEdit10.Location = new System.Drawing.Point(603, 74);
-            this.checkEdit10.Name = "checkEdit10";
-            this.checkEdit10.Properties.Caption = "缺陷尖端距二位侧边梁：";
-            this.checkEdit10.Size = new System.Drawing.Size(193, 22);
-            this.checkEdit10.TabIndex = 8;
-            // 
-            // checkEdit14
-            // 
-            this.checkEdit14.Location = new System.Drawing.Point(48, 131);
-            this.checkEdit14.Name = "checkEdit14";
-            this.checkEdit14.Properties.Caption = "增加幅度：";
-            this.checkEdit14.Size = new System.Drawing.Size(97, 22);
-            this.checkEdit14.TabIndex = 12;
-            // 
-            // checkEdit5
-            // 
-            this.checkEdit5.Location = new System.Drawing.Point(610, 70);
-            this.checkEdit5.Name = "checkEdit5";
-            this.checkEdit5.Properties.Caption = "吊挂设备：";
-            this.checkEdit5.Size = new System.Drawing.Size(92, 22);
-            this.checkEdit5.TabIndex = 7;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Appearance.Font = new System.Drawing.Font("黑体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
-            this.groupControl2.Appearance.Options.UseFont = true;
-            this.groupControl2.Appearance.Options.UseTextOptions = true;
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.groupControl2.Controls.Add(this.checkEdit5);
-            this.groupControl2.Controls.Add(this.checkEdit2);
-            this.groupControl2.Controls.Add(this.checkEdit4);
-            this.groupControl2.Controls.Add(this.checkEdit1);
-            this.groupControl2.Controls.Add(this.checkEdit3);
-            this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
-            this.groupControl2.Controls.Add(this.CARNAME);
-            this.groupControl2.Controls.Add(this.REPAIR_NAME);
-            this.groupControl2.Controls.Add(this.COLUMN_NAME);
-            this.groupControl2.Controls.Add(this.LATHE_NAME);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(2, 27);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1491, 97);
-            this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "列车信息";
-            // 
-            // checkEdit15
-            // 
-            this.checkEdit15.Location = new System.Drawing.Point(603, 130);
-            this.checkEdit15.Name = "checkEdit15";
-            this.checkEdit15.Properties.Caption = "相位：";
-            this.checkEdit15.Size = new System.Drawing.Size(75, 22);
-            this.checkEdit15.TabIndex = 13;
-            // 
-            // checkEdit4
-            // 
-            this.checkEdit4.Location = new System.Drawing.Point(49, 66);
-            this.checkEdit4.Name = "checkEdit4";
-            this.checkEdit4.Properties.Caption = "车号：";
-            this.checkEdit4.Size = new System.Drawing.Size(75, 22);
-            this.checkEdit4.TabIndex = 6;
-            // 
-            // checkEdit11
-            // 
-            this.checkEdit11.Location = new System.Drawing.Point(1168, 75);
-            this.checkEdit11.Name = "checkEdit11";
-            this.checkEdit11.Properties.Caption = "缺陷位置：";
-            this.checkEdit11.Size = new System.Drawing.Size(90, 22);
-            this.checkEdit11.TabIndex = 9;
-            // 
-            // checkEdit12
-            // 
-            this.checkEdit12.Location = new System.Drawing.Point(48, 103);
-            this.checkEdit12.Name = "checkEdit12";
-            this.checkEdit12.Properties.Caption = "缺陷长度：";
-            this.checkEdit12.Size = new System.Drawing.Size(96, 22);
-            this.checkEdit12.TabIndex = 10;
-            // 
-            // checkEdit13
-            // 
-            this.checkEdit13.Location = new System.Drawing.Point(603, 103);
-            this.checkEdit13.Name = "checkEdit13";
-            this.checkEdit13.Properties.Caption = "缺陷深度：";
-            this.checkEdit13.Size = new System.Drawing.Size(92, 22);
-            this.checkEdit13.TabIndex = 11;
-            // 
-            // LATHE_NAME
-            // 
-            this.LATHE_NAME.Location = new System.Drawing.Point(172, 38);
-            this.LATHE_NAME.Name = "LATHE_NAME";
-            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
-            this.LATHE_NAME.TabIndex = 13;
-            // 
-            // COLUMN_NAME
-            // 
-            this.COLUMN_NAME.Location = new System.Drawing.Point(771, 35);
-            this.COLUMN_NAME.Name = "COLUMN_NAME";
-            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
-            this.COLUMN_NAME.TabIndex = 14;
-            // 
-            // CHECK_TM
-            // 
-            this.CHECK_TM.Location = new System.Drawing.Point(172, 46);
-            this.CHECK_TM.Name = "CHECK_TM";
-            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
-            this.CHECK_TM.TabIndex = 17;
-            // 
-            // DISTANCE1
-            // 
-            this.DISTANCE1.Location = new System.Drawing.Point(229, 73);
-            this.DISTANCE1.Name = "DISTANCE1";
-            this.DISTANCE1.Size = new System.Drawing.Size(128, 24);
-            this.DISTANCE1.TabIndex = 18;
-            // 
-            // IF_PENETRATION
-            // 
-            this.IF_PENETRATION.Location = new System.Drawing.Point(1281, 46);
-            this.IF_PENETRATION.Name = "IF_PENETRATION";
-            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
-            this.IF_PENETRATION.TabIndex = 19;
-            // 
-            // INCREASE
-            // 
-            this.INCREASE.Location = new System.Drawing.Point(172, 129);
-            this.INCREASE.Name = "INCREASE";
-            this.INCREASE.Size = new System.Drawing.Size(185, 24);
-            this.INCREASE.TabIndex = 20;
-            // 
-            // DISTANCE2
-            // 
-            this.DISTANCE2.Location = new System.Drawing.Point(802, 72);
-            this.DISTANCE2.Name = "DISTANCE2";
-            this.DISTANCE2.Size = new System.Drawing.Size(154, 24);
-            this.DISTANCE2.TabIndex = 23;
-            // 
-            // LENGTH
-            // 
-            this.LENGTH.Location = new System.Drawing.Point(172, 101);
-            this.LENGTH.Name = "LENGTH";
-            this.LENGTH.Size = new System.Drawing.Size(185, 24);
-            this.LENGTH.TabIndex = 24;
-            // 
-            // PHASE
-            // 
-            this.PHASE.Location = new System.Drawing.Point(771, 130);
-            this.PHASE.Name = "PHASE";
-            this.PHASE.Size = new System.Drawing.Size(185, 24);
-            this.PHASE.TabIndex = 25;
-            // 
-            // FAULT_BEAMID
-            // 
-            this.FAULT_BEAMID.Location = new System.Drawing.Point(771, 46);
-            this.FAULT_BEAMID.Name = "FAULT_BEAMID";
-            this.FAULT_BEAMID.Size = new System.Drawing.Size(185, 24);
-            this.FAULT_BEAMID.TabIndex = 26;
-            // 
-            // FAULT_POSITION
-            // 
-            this.FAULT_POSITION.Location = new System.Drawing.Point(1281, 76);
-            this.FAULT_POSITION.Name = "FAULT_POSITION";
-            this.FAULT_POSITION.Size = new System.Drawing.Size(185, 24);
-            this.FAULT_POSITION.TabIndex = 27;
-            // 
-            // DEPTH
-            // 
-            this.DEPTH.Location = new System.Drawing.Point(771, 102);
-            this.DEPTH.Name = "DEPTH";
-            this.DEPTH.Size = new System.Drawing.Size(185, 24);
-            this.DEPTH.TabIndex = 28;
-            // 
-            // REPAIR_NAME
-            // 
-            this.REPAIR_NAME.Location = new System.Drawing.Point(1281, 37);
-            this.REPAIR_NAME.Name = "REPAIR_NAME";
-            this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
-            this.REPAIR_NAME.TabIndex = 15;
-            // 
-            // CARNAME
-            // 
-            this.CARNAME.Location = new System.Drawing.Point(172, 66);
-            this.CARNAME.Name = "CARNAME";
-            this.CARNAME.Size = new System.Drawing.Size(185, 24);
-            this.CARNAME.TabIndex = 16;
-            // 
-            // EQUIMENT_NAME
-            // 
-            this.EQUIMENT_NAME.Location = new System.Drawing.Point(771, 65);
-            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
-            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
-            this.EQUIMENT_NAME.TabIndex = 17;
-            // 
-            // checkEdit3
-            // 
-            this.checkEdit3.Location = new System.Drawing.Point(1168, 37);
-            this.checkEdit3.Name = "checkEdit3";
-            this.checkEdit3.Properties.Caption = "修程：";
-            this.checkEdit3.Size = new System.Drawing.Size(75, 22);
-            this.checkEdit3.TabIndex = 5;
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(50, 39);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "车型：";
-            this.checkEdit1.Size = new System.Drawing.Size(75, 22);
-            this.checkEdit1.TabIndex = 3;
-            // 
-            // checkEdit2
-            // 
-            this.checkEdit2.Location = new System.Drawing.Point(610, 41);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "列号：";
-            this.checkEdit2.Size = new System.Drawing.Size(75, 22);
-            this.checkEdit2.TabIndex = 4;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton1.Location = new System.Drawing.Point(676, 3);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(130, 36);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "查找";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 284);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1491, 39);
-            this.panelControl1.TabIndex = 5;
-            // 
             // gridControl1
             // 
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 323);
+            this.gridControl1.Location = new System.Drawing.Point(2, 294);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1491, 556);
+            this.gridControl1.Size = new System.Drawing.Size(1491, 585);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -455,7 +329,30 @@
             this.修改ToolStripMenuItem,
             this.删除ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 100);
+            // 
+            // 显示ToolStripMenuItem
+            // 
+            this.显示ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.详细信息ToolStripMenuItem,
+            this.缩略信息ToolStripMenuItem});
+            this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
+            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.显示ToolStripMenuItem.Text = "查看";
+            // 
+            // 详细信息ToolStripMenuItem
+            // 
+            this.详细信息ToolStripMenuItem.Name = "详细信息ToolStripMenuItem";
+            this.详细信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.详细信息ToolStripMenuItem.Text = "详细信息";
+            this.详细信息ToolStripMenuItem.Click += new System.EventHandler(this.详细信息ToolStripMenuItem_Click);
+            // 
+            // 缩略信息ToolStripMenuItem
+            // 
+            this.缩略信息ToolStripMenuItem.Name = "缩略信息ToolStripMenuItem";
+            this.缩略信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.缩略信息ToolStripMenuItem.Text = "缩略信息";
+            this.缩略信息ToolStripMenuItem.Click += new System.EventHandler(this.缩略信息ToolStripMenuItem_Click);
             // 
             // 添加ToolStripMenuItem
             // 
@@ -478,28 +375,131 @@
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
-            // 显示ToolStripMenuItem
+            // gridView1
             // 
-            this.显示ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.详细信息ToolStripMenuItem,
-            this.缩略信息ToolStripMenuItem});
-            this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
-            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.显示ToolStripMenuItem.Text = "查看";
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // 详细信息ToolStripMenuItem
+            // panelControl1
             // 
-            this.详细信息ToolStripMenuItem.Name = "详细信息ToolStripMenuItem";
-            this.详细信息ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.详细信息ToolStripMenuItem.Text = "详细信息";
-            this.详细信息ToolStripMenuItem.Click += new System.EventHandler(this.详细信息ToolStripMenuItem_Click);
+            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(2, 255);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1491, 39);
+            this.panelControl1.TabIndex = 5;
             // 
-            // 缩略信息ToolStripMenuItem
+            // simpleButton1
             // 
-            this.缩略信息ToolStripMenuItem.Name = "缩略信息ToolStripMenuItem";
-            this.缩略信息ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.缩略信息ToolStripMenuItem.Text = "缩略信息";
-            this.缩略信息ToolStripMenuItem.Click += new System.EventHandler(this.缩略信息ToolStripMenuItem_Click);
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.simpleButton1.Location = new System.Drawing.Point(676, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(130, 36);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "查找";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Appearance.Font = new System.Drawing.Font("黑体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.groupControl2.Appearance.Options.UseFont = true;
+            this.groupControl2.Appearance.Options.UseTextOptions = true;
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.groupControl2.Controls.Add(this.checkEdit5);
+            this.groupControl2.Controls.Add(this.checkEdit2);
+            this.groupControl2.Controls.Add(this.checkEdit4);
+            this.groupControl2.Controls.Add(this.checkEdit1);
+            this.groupControl2.Controls.Add(this.checkEdit3);
+            this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
+            this.groupControl2.Controls.Add(this.CARNAME);
+            this.groupControl2.Controls.Add(this.REPAIR_NAME);
+            this.groupControl2.Controls.Add(this.COLUMN_NAME);
+            this.groupControl2.Controls.Add(this.LATHE_NAME);
+            this.groupControl2.Controls.Add(this.checkEdit6);
+            this.groupControl2.Controls.Add(this.CHECK_TM);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl2.Location = new System.Drawing.Point(2, 27);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(1491, 97);
+            this.groupControl2.TabIndex = 2;
+            this.groupControl2.Text = "列车信息";
+            // 
+            // checkEdit5
+            // 
+            this.checkEdit5.Location = new System.Drawing.Point(579, 70);
+            this.checkEdit5.Name = "checkEdit5";
+            this.checkEdit5.Properties.Caption = "吊挂设备：";
+            this.checkEdit5.Size = new System.Drawing.Size(92, 22);
+            this.checkEdit5.TabIndex = 7;
+            // 
+            // checkEdit2
+            // 
+            this.checkEdit2.Location = new System.Drawing.Point(579, 42);
+            this.checkEdit2.Name = "checkEdit2";
+            this.checkEdit2.Properties.Caption = "列      号：";
+            this.checkEdit2.Size = new System.Drawing.Size(89, 22);
+            this.checkEdit2.TabIndex = 4;
+            // 
+            // checkEdit4
+            // 
+            this.checkEdit4.Location = new System.Drawing.Point(49, 66);
+            this.checkEdit4.Name = "checkEdit4";
+            this.checkEdit4.Properties.Caption = "车      号：";
+            this.checkEdit4.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit4.TabIndex = 6;
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(50, 39);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "车      型：";
+            this.checkEdit1.Size = new System.Drawing.Size(95, 22);
+            this.checkEdit1.TabIndex = 3;
+            // 
+            // checkEdit3
+            // 
+            this.checkEdit3.Location = new System.Drawing.Point(1147, 37);
+            this.checkEdit3.Name = "checkEdit3";
+            this.checkEdit3.Properties.Caption = "修      程：";
+            this.checkEdit3.Size = new System.Drawing.Size(96, 22);
+            this.checkEdit3.TabIndex = 5;
+            // 
+            // EQUIMENT_NAME
+            // 
+            this.EQUIMENT_NAME.Location = new System.Drawing.Point(748, 65);
+            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
+            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
+            this.EQUIMENT_NAME.TabIndex = 17;
+            // 
+            // CARNAME
+            // 
+            this.CARNAME.Location = new System.Drawing.Point(172, 66);
+            this.CARNAME.Name = "CARNAME";
+            this.CARNAME.Size = new System.Drawing.Size(185, 24);
+            this.CARNAME.TabIndex = 16;
+            // 
+            // REPAIR_NAME
+            // 
+            this.REPAIR_NAME.Location = new System.Drawing.Point(1264, 37);
+            this.REPAIR_NAME.Name = "REPAIR_NAME";
+            this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
+            this.REPAIR_NAME.TabIndex = 15;
+            // 
+            // COLUMN_NAME
+            // 
+            this.COLUMN_NAME.Location = new System.Drawing.Point(748, 35);
+            this.COLUMN_NAME.Name = "COLUMN_NAME";
+            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
+            this.COLUMN_NAME.TabIndex = 14;
+            // 
+            // LATHE_NAME
+            // 
+            this.LATHE_NAME.Location = new System.Drawing.Point(172, 38);
+            this.LATHE_NAME.Name = "LATHE_NAME";
+            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
+            this.LATHE_NAME.TabIndex = 13;
             // 
             // FormFaultInfoSearch
             // 
@@ -511,45 +511,45 @@
             this.Text = "FormFaultInfoSearch";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

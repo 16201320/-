@@ -548,6 +548,7 @@
             this.navBarControl.Size = new System.Drawing.Size(219, 552);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
+            this.navBarControl.Visible = false;
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
             // 
             // employeesNavBarGroup

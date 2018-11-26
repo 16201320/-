@@ -41,8 +41,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridView1.OptionsCustomization.AllowColumnMoving = false;
             //不显示右键菜单
             gridView1.OptionsMenu.EnableColumnMenu = false;
-            //隐藏细节信息
-            this.详细信息ToolStripMenuItem1.PerformClick();
+
         }
 
         //设置面板信息
