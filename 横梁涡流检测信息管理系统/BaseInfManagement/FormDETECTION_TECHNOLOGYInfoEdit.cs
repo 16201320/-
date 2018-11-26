@@ -21,11 +21,17 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             InitializeComponent();
             if (strOperationFlag.Equals("modify"))
             {
+                //设置窗口标题
+                this.Text = "添加检测技术信息";
+                //获取需要修改的信息
                 this.DetectionTechnology_ID = dic["检测技术编号"];
                 this.Detection_Technology_NAME.Text = dic["检测技术名称"];
             }
             else
             {
+                //设置窗口标题
+                this.Text = "添加检测技术信息";
+
                 this.Detection_Technology_NAME.Focus();
             }
         }

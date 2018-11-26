@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.Detection_Technology_NAME = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Detection_Technology_NAME.Properties)).BeginInit();
@@ -50,6 +50,14 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(556, 356);
             this.panelControl1.TabIndex = 0;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(301, 230);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(118, 33);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "返回";
             // 
             // simpleButton1
             // 
@@ -76,14 +84,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "检测技术名称：";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(301, 230);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(118, 33);
-            this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "返回";
-            // 
             // FormDETECTION_TECHNOLOGYInfoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -93,7 +93,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDETECTION_TECHNOLOGYInfoEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "编辑检测技术信息";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

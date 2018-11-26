@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
@@ -50,6 +50,14 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(556, 356);
             this.panelControl1.TabIndex = 0;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(308, 186);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(118, 33);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "返回";
             // 
             // simpleButton1
             // 
@@ -76,14 +84,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "吊挂设备名称：";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(308, 186);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(118, 33);
-            this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "返回";
-            // 
             // FormHoistingEquipmentInfoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -93,7 +93,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormHoistingEquipmentInfoEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "编辑吊挂设备信息";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

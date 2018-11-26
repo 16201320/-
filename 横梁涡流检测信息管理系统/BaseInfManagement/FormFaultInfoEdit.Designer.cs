@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFaultInfoEdit));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.DEPTH = new DevExpress.XtraEditors.TextEdit();
             this.FAULT_POSITION = new DevExpress.XtraEditors.TextEdit();
             this.FAULT_BEAMID = new DevExpress.XtraEditors.TextEdit();
@@ -41,7 +46,6 @@
             this.INCREASE = new DevExpress.XtraEditors.TextEdit();
             this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
             this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
-            this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -52,12 +56,17 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.ENTERING_PERSON = new DevExpress.XtraEditors.TextEdit();
+            this.TEAM_LEADER = new DevExpress.XtraEditors.TextEdit();
+            this.INVESTIGATOR = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -70,16 +79,7 @@
             this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).BeginInit();
@@ -95,6 +95,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
@@ -103,9 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -144,6 +144,56 @@
             this.groupControl1.Size = new System.Drawing.Size(1333, 347);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "故障信息";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(327, 266);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(19, 23);
+            this.labelControl8.TabIndex = 33;
+            this.labelControl8.Text = "度";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(721, 202);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(30, 22);
+            this.labelControl7.TabIndex = 32;
+            this.labelControl7.Text = "mm";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(326, 203);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(30, 22);
+            this.labelControl6.TabIndex = 31;
+            this.labelControl6.Text = "mm";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(721, 139);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(30, 22);
+            this.labelControl5.TabIndex = 30;
+            this.labelControl5.Text = "mm";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(326, 139);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(30, 22);
+            this.labelControl4.TabIndex = 29;
+            this.labelControl4.Text = "mm";
             // 
             // DEPTH
             // 
@@ -214,13 +264,6 @@
             this.DISTANCE1.Name = "DISTANCE1";
             this.DISTANCE1.Size = new System.Drawing.Size(148, 24);
             this.DISTANCE1.TabIndex = 18;
-            // 
-            // CHECK_TM
-            // 
-            this.CHECK_TM.Location = new System.Drawing.Point(1013, 126);
-            this.CHECK_TM.Name = "CHECK_TM";
-            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
-            this.CHECK_TM.TabIndex = 17;
             // 
             // labelControl32
             // 
@@ -322,6 +365,13 @@
             this.labelControl21.TabIndex = 4;
             this.labelControl21.Text = "检测技术：";
             // 
+            // CHECK_TM
+            // 
+            this.CHECK_TM.Location = new System.Drawing.Point(1013, 126);
+            this.CHECK_TM.Name = "CHECK_TM";
+            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
+            this.CHECK_TM.TabIndex = 17;
+            // 
             // labelControl20
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -337,9 +387,9 @@
             this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImage")));
-            this.groupControl4.Controls.Add(this.textEdit3);
-            this.groupControl4.Controls.Add(this.textEdit2);
-            this.groupControl4.Controls.Add(this.textEdit1);
+            this.groupControl4.Controls.Add(this.ENTERING_PERSON);
+            this.groupControl4.Controls.Add(this.TEAM_LEADER);
+            this.groupControl4.Controls.Add(this.INVESTIGATOR);
             this.groupControl4.Controls.Add(this.labelControl3);
             this.groupControl4.Controls.Add(this.labelControl2);
             this.groupControl4.Controls.Add(this.labelControl1);
@@ -349,6 +399,27 @@
             this.groupControl4.Size = new System.Drawing.Size(1333, 142);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "人员信息";
+            // 
+            // ENTERING_PERSON
+            // 
+            this.ENTERING_PERSON.Location = new System.Drawing.Point(1013, 71);
+            this.ENTERING_PERSON.Name = "ENTERING_PERSON";
+            this.ENTERING_PERSON.Size = new System.Drawing.Size(185, 24);
+            this.ENTERING_PERSON.TabIndex = 7;
+            // 
+            // TEAM_LEADER
+            // 
+            this.TEAM_LEADER.Location = new System.Drawing.Point(567, 71);
+            this.TEAM_LEADER.Name = "TEAM_LEADER";
+            this.TEAM_LEADER.Size = new System.Drawing.Size(185, 24);
+            this.TEAM_LEADER.TabIndex = 6;
+            // 
+            // INVESTIGATOR
+            // 
+            this.INVESTIGATOR.Location = new System.Drawing.Point(161, 71);
+            this.INVESTIGATOR.Name = "INVESTIGATOR";
+            this.INVESTIGATOR.Size = new System.Drawing.Size(185, 24);
+            this.INVESTIGATOR.TabIndex = 5;
             // 
             // labelControl3
             // 
@@ -390,6 +461,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1333, 79);
             this.panel1.TabIndex = 4;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(687, 14);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(141, 53);
+            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.Text = "返回";
             // 
             // simpleButton1
             // 
@@ -486,6 +567,7 @@
             this.groupControl2.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.CHECK_TM);
             this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
             this.groupControl2.Controls.Add(this.CARNAME);
             this.groupControl2.Controls.Add(this.REPAIR_NAME);
@@ -497,7 +579,6 @@
             this.groupControl2.Controls.Add(this.labelControl16);
             this.groupControl2.Controls.Add(this.labelControl13);
             this.groupControl2.Controls.Add(this.labelControl20);
-            this.groupControl2.Controls.Add(this.CHECK_TM);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
@@ -515,90 +596,9 @@
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "车      型：";
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(161, 71);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(185, 24);
-            this.textEdit1.TabIndex = 5;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(567, 71);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(185, 24);
-            this.textEdit2.TabIndex = 6;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(1013, 71);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(185, 24);
-            this.textEdit3.TabIndex = 7;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(326, 139);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(30, 22);
-            this.labelControl4.TabIndex = 29;
-            this.labelControl4.Text = "mm";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(721, 139);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(30, 22);
-            this.labelControl5.TabIndex = 30;
-            this.labelControl5.Text = "mm";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(326, 203);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(30, 22);
-            this.labelControl6.TabIndex = 31;
-            this.labelControl6.Text = "mm";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(721, 202);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(30, 22);
-            this.labelControl7.TabIndex = 32;
-            this.labelControl7.Text = "mm";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(327, 266);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(19, 23);
-            this.labelControl8.TabIndex = 33;
-            this.labelControl8.Text = "度";
-            // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2007 Blue";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(687, 14);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(141, 53);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "返回";
             // 
             // FormFaultInfoEdit
             // 
@@ -611,7 +611,6 @@
             this.Controls.Add(this.groupControl2);
             this.Name = "FormFaultInfoEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormFaultInfoEdit";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -629,6 +628,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
@@ -638,9 +640,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,9 +691,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit ENTERING_PERSON;
+        private DevExpress.XtraEditors.TextEdit TEAM_LEADER;
+        private DevExpress.XtraEditors.TextEdit INVESTIGATOR;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
