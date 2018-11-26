@@ -120,6 +120,18 @@
   <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupControl4.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAT9JREFUSEvV
+        lkEuBEEUhnvjBhYOIrEwC3ETl+ECQgYLCXEGiYhgbMURLIjEGkt8r7r/ylPdursyJfiSL9Pv7+qqzNTr
+        nq5gAbfwHj8KaXPZnDZ3xIKuwSXcxMgjWrgWqjKso835EKoGrV6a1ry/ttAFWn0eqpoz1Lg+T1Eoi6SB
+        6u+yIUVat4JrtPoyVDV3qHF93qJQFmkFhfg7C2nj/cb+72bQxvuN7WuGVzzBDZygOMS3+rBGF/wES81n
+        oMRC9k2meNNox6v4hXShMc1wjIb9DRygP+fdx/hXoVD4gcJnL7iIxh76c13uYECBGGqGIwtgBZVJ4bN3
+        XMbWoLHsop/Qz5Hm2xiLXPRM7LtW58Nz86kp/D0whhmOXejKitx3BrsxjeyfTm9Bz5gO6FKtnd0M85DV
+        3vOQdcOWYOARVFWfOZ42EoZFe64AAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCarInfo));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
             this.添加车列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改车列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,6 +122,9 @@
             // 
             // groupControl4
             // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImage")));
             this.groupControl4.Controls.Add(this.simpleButton2);
             this.groupControl4.Controls.Add(this.textEdit4);
             this.groupControl4.Controls.Add(this.labelControl4);
@@ -136,13 +140,15 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1595, 76);
+            this.groupControl4.Size = new System.Drawing.Size(1794, 76);
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "基础信息录入";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(1515, 36);
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 9F);
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(1662, 36);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 13;
@@ -150,22 +156,26 @@
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(1402, 37);
+            this.textEdit4.Location = new System.Drawing.Point(1526, 35);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(100, 24);
+            this.textEdit4.Size = new System.Drawing.Size(130, 24);
             this.textEdit4.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(1320, 40);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(1434, 35);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(65, 18);
+            this.labelControl4.Size = new System.Drawing.Size(86, 25);
             this.labelControl4.TabIndex = 11;
             this.labelControl4.Text = "检测技术:";
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(1088, 40);
+            this.simpleButton5.Appearance.Font = new System.Drawing.Font("黑体", 9F);
+            this.simpleButton5.Appearance.Options.UseFont = true;
+            this.simpleButton5.Location = new System.Drawing.Point(1150, 36);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 10;
@@ -173,7 +183,9 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(615, 35);
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("黑体", 9F);
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Location = new System.Drawing.Point(623, 37);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 8;
@@ -181,7 +193,9 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(189, 37);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("黑体", 9F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(200, 36);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 6;
@@ -189,46 +203,52 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(957, 39);
+            this.textEdit3.Location = new System.Drawing.Point(1014, 35);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(100, 24);
+            this.textEdit3.Size = new System.Drawing.Size(130, 24);
             this.textEdit3.TabIndex = 5;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(495, 37);
+            this.textEdit2.Location = new System.Drawing.Point(487, 37);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(100, 24);
+            this.textEdit2.Size = new System.Drawing.Size(130, 24);
             this.textEdit2.TabIndex = 4;
             // 
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(64, 36);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 24);
+            this.textEdit1.Size = new System.Drawing.Size(130, 24);
             this.textEdit1.TabIndex = 3;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(874, 42);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(922, 36);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 18);
+            this.labelControl3.Size = new System.Drawing.Size(86, 25);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "吊挂设备:";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(416, 43);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(435, 34);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(35, 18);
+            this.labelControl2.Size = new System.Drawing.Size(46, 25);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "车列:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 40);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(12, 35);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(35, 18);
+            this.labelControl1.Size = new System.Drawing.Size(46, 25);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "车型:";
             // 
@@ -272,17 +292,17 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 76);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1595, 627);
+            this.panelControl1.Size = new System.Drawing.Size(1794, 819);
             this.panelControl1.TabIndex = 3;
             // 
             // gridControl4
             // 
             this.gridControl4.ContextMenuStrip = this.contextMenuStrip4;
             this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.Location = new System.Drawing.Point(1320, 2);
+            this.gridControl4.Location = new System.Drawing.Point(1473, 2);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(273, 623);
+            this.gridControl4.Size = new System.Drawing.Size(319, 815);
             this.gridControl4.TabIndex = 3;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -320,6 +340,14 @@
             // 
             // gridView4
             // 
+            this.gridView4.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView4.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView4.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView4.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView4.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView4.Appearance.Row.Options.UseFont = true;
+            this.gridView4.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView4.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.Name = "gridView4";
             this.gridView4.DoubleClick += new System.EventHandler(this.gridView4_DoubleClick);
@@ -328,10 +356,10 @@
             // 
             this.gridControl3.ContextMenuStrip = this.contextMenuStrip3;
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gridControl3.Location = new System.Drawing.Point(874, 2);
+            this.gridControl3.Location = new System.Drawing.Point(922, 2);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(446, 623);
+            this.gridControl3.Size = new System.Drawing.Size(551, 815);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -369,6 +397,14 @@
             // 
             // gridView3
             // 
+            this.gridView3.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView3.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView3.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView3.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView3.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView3.Appearance.Row.Options.UseFont = true;
+            this.gridView3.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView3.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.DoubleClick += new System.EventHandler(this.gridView3_DoubleClick);
@@ -377,10 +413,10 @@
             // 
             this.gridControl2.ContextMenuStrip = this.contextMenuStrip2;
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gridControl2.Location = new System.Drawing.Point(416, 2);
+            this.gridControl2.Location = new System.Drawing.Point(435, 2);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(458, 623);
+            this.gridControl2.Size = new System.Drawing.Size(487, 815);
             this.gridControl2.TabIndex = 4;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -388,6 +424,14 @@
             // 
             // gridView2
             // 
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             // 
@@ -398,13 +442,21 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(414, 623);
+            this.gridControl1.Size = new System.Drawing.Size(433, 815);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
@@ -413,7 +465,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1595, 703);
+            this.ClientSize = new System.Drawing.Size(1794, 895);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl4);
             this.Name = "FormCarInfo";
