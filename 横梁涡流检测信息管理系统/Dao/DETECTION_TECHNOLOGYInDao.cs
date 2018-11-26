@@ -47,7 +47,7 @@ namespace EddyCurrentTesting
             int result = helper.ExecuteNonQuery(sql, paramList);
             if (result >= 1)
             {
-                ret = true; ;
+                ret = true; 
             }
             return ret;
         }
