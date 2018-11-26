@@ -526,7 +526,7 @@
             // 
             // navBarControl
             // 
-            this.navBarControl.ActiveGroup = this.employeesNavBarGroup;
+            this.navBarControl.ActiveGroup = this.navBarGroup2;
             this.navBarControl.Appearance.Item.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.navBarControl.Appearance.Item.Options.UseFont = true;
             this.navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
@@ -595,6 +595,7 @@
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "数据统计";
+            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
             this.navBarGroup2.Name = "navBarGroup2";
