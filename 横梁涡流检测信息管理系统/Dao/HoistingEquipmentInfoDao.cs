@@ -14,37 +14,36 @@ namespace EddyCurrentTesting
         {
             helper = new SqlHelper();
         }
+        //查询所有可以吊挂设备
+        public DataSet getList()
+        {
+            DataSet ds = new DataSet();
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            string sql = "select EQUIMENT_ID, EQUIMENT_NAME from LATHE_INFO ";
+            ds = helper.ExecuteDataSet(sql, paramList.ToArray());
+            return ds;
+        }
+
 
         
-
-        /// <summary>
-        /// 删除吊挂设备信息
-        /// </summary>
-        /// <param name="id">给定的车辆内码</param>
-        /// <returns>true --删除成功,  false--删除失败</returns>
-        public bool deleteCar(string id)
+        // 删除吊挂设备信息
+        public bool delete(string id)
         {
             String sql = "delete from HOISTINGEQUIPMENT_INFO  where EQUIMENT_ID = @EQUIMENT_ID";
             List<SqlParameter> paramList = new List<SqlParameter>();
             paramList.Add(new SqlParameter("@EQUIMENT_ID", id));
-
             int result = helper.ExecuteNonQuery(sql, paramList);
-
             return (result > 0);
         }
 
-        /// <summary>
-        /// 保存修改的吊挂设备信息，用于保存编辑后的吊挂设备信息
-        /// </summary>
-        public bool ModifyCar(string EQUIMENT_ID, string EQUIMENT_NAME)
+        // 保存修改的吊挂设备信息
+        public bool Modify(string EQUIMENT_ID, string EQUIMENT_NAME)
         {
             bool ret = false;
-
             string sql = "update HOISTINGEQUIPMENT_INFO set EQUIMENT_NAME = @EQUIMENT_NAME where EQUIMENT_ID = @EQUIMENT_ID";
             List<SqlParameter> paramList = new List<SqlParameter>();
             paramList.Add(new SqlParameter("@EQUIMENT_NAME", EQUIMENT_NAME));
             paramList.Add(new SqlParameter("@EQUIMENT_ID", EQUIMENT_ID));
-
             int result = helper.ExecuteNonQuery(sql, paramList);
             if (result >= 1)
             {
@@ -53,10 +52,8 @@ namespace EddyCurrentTesting
             return ret;
         }
 
-        /// <summary>
-        /// 保存添加的吊挂设备信息
-        /// </summary>       
-        public bool SaveCar(string EQUIMENT_NAME)
+        // 保存添加的吊挂设备信息     
+        public bool Save(string EQUIMENT_NAME)
         {
             bool ret = false;
             string sql = "insert into HOISTINGEQUIPMENT_INFO (EQUIMENT_NAME)  " +
@@ -69,9 +66,10 @@ namespace EddyCurrentTesting
             {
                 ret = true;
             }
-
             return ret;
         }
+
+
 
     }
 }

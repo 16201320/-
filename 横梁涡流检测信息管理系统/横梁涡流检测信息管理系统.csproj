@@ -129,6 +129,7 @@
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\FaultInfoDao.cs" />
+    <Compile Include="Dao\DETECTION_TECHNOLOGYInDao.cs" />
     <Compile Include="Dao\LatheColumnDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="DataClass\SqlHelper.cs" />

@@ -74,7 +74,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     break;
             }
         }
-
+        //返回按钮
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Close();

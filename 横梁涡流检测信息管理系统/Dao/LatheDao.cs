@@ -14,6 +14,15 @@ namespace 横梁涡流检测信息管理系统
         {
             helper = new SqlHelper();
         }
+        //查询所有可以车型
+        public DataSet getList()
+        {
+            DataSet ds = new DataSet();
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            string sql = "select LATHE_ID, LATHE_NAME from LATHE_INFO ";
+            ds = helper.ExecuteDataSet(sql, paramList.ToArray());
+            return ds;
+        }
 
         // 删除车型信息
         public bool delete(string LATHE_ID)

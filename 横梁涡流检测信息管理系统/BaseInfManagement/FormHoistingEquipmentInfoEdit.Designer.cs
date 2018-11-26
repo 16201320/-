@@ -50,6 +50,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(556, 356);
             this.panelControl1.TabIndex = 0;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // simpleButton2
             // 
@@ -58,6 +59,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(118, 33);
             this.simpleButton2.TabIndex = 8;
             this.simpleButton2.Text = "返回";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -66,6 +68,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(118, 33);
             this.simpleButton1.TabIndex = 7;
             this.simpleButton1.Text = "保存";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // EQUIMENT_NAME
             // 

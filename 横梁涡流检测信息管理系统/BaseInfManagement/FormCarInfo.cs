@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraGrid;
+using EddyCurrentTesting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -229,9 +230,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount > 0)
+                if (this.gridView2.RowCount > 0)
                 {
-                    if (this.gridView1.GetSelectedRows()[0] < 0)
+                    if (this.gridView2.GetSelectedRows()[0] < 0)
                     {
                         MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
                         return;
@@ -240,12 +241,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     {
                         if (MessageBox.Show("确认删除车列信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
+                            LatheColumnDao dao = new LatheColumnDao();
+                            string LATHE_ID = this.gridView2.GetRowCellValue(this.gridView2.FocusedRowHandle, this.gridView2.Columns[0]).ToString();
+                            if (dao.delete(LATHE_ID))
                             {
-                                MessageBox.Show("成功删除");
                                 FreshForm();
-                            }*/
+                            }
                         }
                     }
                 }
@@ -309,9 +310,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount > 0)
+                if (this.gridView3.RowCount > 0)
                 {
-                    if (this.gridView1.GetSelectedRows()[0] < 0)
+                    if (this.gridView3.GetSelectedRows()[0] < 0)
                     {
                         MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
                         return;
@@ -320,12 +321,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     {
                         if (MessageBox.Show("确认吊挂设备信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
+                            HoistingEquipmentInfoDao dao = new HoistingEquipmentInfoDao();
+                            string LATHE_ID = this.gridView3.GetRowCellValue(this.gridView3.FocusedRowHandle, this.gridView3.Columns[0]).ToString();
+                            if (dao.delete(LATHE_ID))
                             {
-                                MessageBox.Show("成功删除");
                                 FreshForm();
-                            }*/
+                            }
                         }
                     }
                 }
@@ -388,9 +389,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             try
             {
-                if (this.gridView1.RowCount > 0)
+                if (this.gridView4.RowCount > 0)
                 {
-                    if (this.gridView1.GetSelectedRows()[0] < 0)
+                    if (this.gridView4.GetSelectedRows()[0] < 0)
                     {
                         MessageBox.Show("没有选中信息，请选择！", "提示", MessageBoxButtons.OK);
                         return;
@@ -399,12 +400,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     {
                         if (MessageBox.Show("确认删除检测技术信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
+                            DETECTION_TECHNOLOGYInDao dao = new DETECTION_TECHNOLOGYInDao();
+                            string LATHE_ID = this.gridView4.GetRowCellValue(this.gridView4.FocusedRowHandle, this.gridView4.Columns[0]).ToString();
+                            if (dao.delete(LATHE_ID))
                             {
-                                MessageBox.Show("成功删除");
                                 FreshForm();
-                            }*/
+                            }
                         }
                     }
                 }
