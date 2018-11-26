@@ -60,7 +60,6 @@
             this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
@@ -100,8 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
@@ -120,6 +117,7 @@
             // 
             this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Controls.Add(this.checkEdit15);
             this.groupControl3.Controls.Add(this.DEPTH);
             this.groupControl3.Controls.Add(this.checkEdit14);
@@ -139,9 +137,9 @@
             this.groupControl3.Controls.Add(this.checkEdit7);
             this.groupControl3.Controls.Add(this.DISTANCE1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 124);
+            this.groupControl3.Location = new System.Drawing.Point(2, 99);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1491, 131);
+            this.groupControl3.Size = new System.Drawing.Size(1679, 131);
             this.groupControl3.TabIndex = 3;
             this.groupControl3.Text = "故障信息";
             // 
@@ -298,24 +296,23 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Controls.Add(this.panelControl1);
             this.groupControl1.Controls.Add(this.groupControl3);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1495, 881);
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(1683, 881);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "故障信息查询";
             // 
             // gridControl1
             // 
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 294);
+            this.gridControl1.Location = new System.Drawing.Point(2, 230);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1491, 585);
+            this.gridControl1.Size = new System.Drawing.Size(1679, 649);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -381,21 +378,12 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 255);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1491, 39);
-            this.panelControl1.TabIndex = 5;
-            // 
             // simpleButton1
             // 
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton1.Location = new System.Drawing.Point(676, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(1539, 70);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(130, 36);
+            this.simpleButton1.Size = new System.Drawing.Size(130, 54);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "查找";
             // 
@@ -420,9 +408,9 @@
             this.groupControl2.Controls.Add(this.checkEdit6);
             this.groupControl2.Controls.Add(this.CHECK_TM);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(2, 27);
+            this.groupControl2.Location = new System.Drawing.Point(2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1491, 97);
+            this.groupControl2.Size = new System.Drawing.Size(1679, 97);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "列车信息";
             // 
@@ -505,7 +493,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1495, 881);
+            this.ClientSize = new System.Drawing.Size(1683, 881);
             this.Controls.Add(this.groupControl1);
             this.Name = "FormFaultInfoSearch";
             this.Text = "FormFaultInfoSearch";
@@ -536,8 +524,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
@@ -589,7 +575,6 @@
         private DevExpress.XtraEditors.TextEdit REPAIR_NAME;
         private DevExpress.XtraEditors.TextEdit COLUMN_NAME;
         private DevExpress.XtraEditors.TextEdit LATHE_NAME;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

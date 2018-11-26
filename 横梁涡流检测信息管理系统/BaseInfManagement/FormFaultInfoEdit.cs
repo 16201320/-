@@ -21,7 +21,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             if (strOperationFlag.Equals("modify"))
             {
                 //设置窗口标题
-                this.Text = "添加缺陷信息";
+                this.Text = "修改缺陷信息";
                 //获取需要修改的信息
                 this.FAULT_ID = dic["序号"].ToString().Trim();
                 this.LATHE_NAME.Text = dic["车型"].ToString().Trim();
@@ -40,14 +40,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 this.Detection_Technology_NAME.Text = dic["检测技术"].ToString().Trim();
                 this.INCREASE.Text = dic["信号幅值"].ToString().Trim();
                 this.PHASE.Text = dic["信号相位"].ToString().Trim();
-               // this.INVESTIGATOR.Text = dic["探伤工"].ToString().Trim();
-               // this.TEAM_LEADER.Text = dic["班主长"].ToString().Trim();
-                //this.ENTERING_PERSON.Text = dic["录入人"].ToString().Trim();
+                this.INVESTIGATOR.Text = dic["探伤工"].ToString().Trim();
+                this.TEAM_LEADER.Text = dic["班主长"].ToString().Trim();
+                this.ENTERING_PERSON.Text = dic["录入人"].ToString().Trim();
             }
             else
             {
                 //设置窗口标题
-                this.Text = "修改缺陷信息";
+                this.Text = "录入缺陷信息";
             }
         }
 
