@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCarInfo));
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加车列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改车列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除车列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,19 +47,19 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加车型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改车型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除车型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加检测技术ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改检测技术ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除检测技术ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加吊挂设备ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改吊挂设备ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除吊挂设备ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

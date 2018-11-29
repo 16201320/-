@@ -24,7 +24,8 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
              "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
              "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
-            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
+            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID " +
+            "order by FAULT_ID desc"
            ;
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         public FormFaultInfoSearch()
@@ -42,7 +43,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridView1.OptionsCustomization.AllowColumnMoving = false;
             //不显示右键菜单
             gridView1.OptionsMenu.EnableColumnMenu = false;
-
+            gridControl1.UseEmbeddedNavigator = true;//设置滑动条
         }
 
         //设置面板信息
@@ -57,7 +58,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         }
 
         //刷新面板显示所有信息
-        private void FreshForm()
+        public  void FreshForm()
         {
             this.GetAllUserinfo(gs_carlist, gridControl1);
         }

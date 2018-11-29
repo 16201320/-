@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFaultInfoEdit));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.IF_PENETRATION = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.Detection_Technology_NAME = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -41,9 +44,7 @@
             this.PHASE = new DevExpress.XtraEditors.TextEdit();
             this.LENGTH = new DevExpress.XtraEditors.TextEdit();
             this.DISTANCE2 = new DevExpress.XtraEditors.TextEdit();
-            this.Detection_Technology_NAME = new DevExpress.XtraEditors.TextEdit();
             this.INCREASE = new DevExpress.XtraEditors.TextEdit();
-            this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
             this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
@@ -55,7 +56,6 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.ENTERING_PERSON = new DevExpress.XtraEditors.TextEdit();
@@ -71,40 +71,45 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.LATHE_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.COLUMN_NAME = new DevExpress.XtraEditors.TextEdit();
             this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
             this.CARNAME = new DevExpress.XtraEditors.TextEdit();
-            this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.CHECK_TM = new DevExpress.XtraEditors.DateEdit();
+            this.EQUIMENT_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.COLUMN_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.LATHE_NAME = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Detection_Technology_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Detection_Technology_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -112,6 +117,8 @@
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.IF_PENETRATION);
+            this.groupControl1.Controls.Add(this.Detection_Technology_NAME);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl6);
@@ -123,9 +130,7 @@
             this.groupControl1.Controls.Add(this.PHASE);
             this.groupControl1.Controls.Add(this.LENGTH);
             this.groupControl1.Controls.Add(this.DISTANCE2);
-            this.groupControl1.Controls.Add(this.Detection_Technology_NAME);
             this.groupControl1.Controls.Add(this.INCREASE);
-            this.groupControl1.Controls.Add(this.IF_PENETRATION);
             this.groupControl1.Controls.Add(this.DISTANCE1);
             this.groupControl1.Controls.Add(this.labelControl32);
             this.groupControl1.Controls.Add(this.labelControl29);
@@ -143,6 +148,27 @@
             this.groupControl1.Size = new System.Drawing.Size(1333, 347);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "故障信息";
+            // 
+            // IF_PENETRATION
+            // 
+            this.IF_PENETRATION.Location = new System.Drawing.Point(1013, 266);
+            this.IF_PENETRATION.Name = "IF_PENETRATION";
+            this.IF_PENETRATION.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.IF_PENETRATION.Properties.PopupSizeable = true;
+            this.IF_PENETRATION.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
+            this.IF_PENETRATION.TabIndex = 19;
+            // 
+            // Detection_Technology_NAME
+            // 
+            this.Detection_Technology_NAME.Location = new System.Drawing.Point(173, 82);
+            this.Detection_Technology_NAME.Name = "Detection_Technology_NAME";
+            this.Detection_Technology_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Detection_Technology_NAME.Properties.NullText = "";
+            this.Detection_Technology_NAME.Size = new System.Drawing.Size(185, 24);
+            this.Detection_Technology_NAME.TabIndex = 22;
             // 
             // labelControl8
             // 
@@ -214,6 +240,7 @@
             this.FAULT_BEAMID.Name = "FAULT_BEAMID";
             this.FAULT_BEAMID.Size = new System.Drawing.Size(185, 24);
             this.FAULT_BEAMID.TabIndex = 26;
+            this.FAULT_BEAMID.EditValueChanged += new System.EventHandler(this.FAULT_BEAMID_EditValueChanged);
             // 
             // PHASE
             // 
@@ -235,13 +262,7 @@
             this.DISTANCE2.Name = "DISTANCE2";
             this.DISTANCE2.Size = new System.Drawing.Size(148, 24);
             this.DISTANCE2.TabIndex = 23;
-            // 
-            // Detection_Technology_NAME
-            // 
-            this.Detection_Technology_NAME.Location = new System.Drawing.Point(173, 82);
-            this.Detection_Technology_NAME.Name = "Detection_Technology_NAME";
-            this.Detection_Technology_NAME.Size = new System.Drawing.Size(185, 24);
-            this.Detection_Technology_NAME.TabIndex = 22;
+            this.DISTANCE2.EditValueChanged += new System.EventHandler(this.DISTANCE2_EditValueChanged);
             // 
             // INCREASE
             // 
@@ -249,13 +270,7 @@
             this.INCREASE.Name = "INCREASE";
             this.INCREASE.Size = new System.Drawing.Size(148, 24);
             this.INCREASE.TabIndex = 20;
-            // 
-            // IF_PENETRATION
-            // 
-            this.IF_PENETRATION.Location = new System.Drawing.Point(1013, 266);
-            this.IF_PENETRATION.Name = "IF_PENETRATION";
-            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
-            this.IF_PENETRATION.TabIndex = 19;
+            this.INCREASE.EditValueChanged += new System.EventHandler(this.INCREASE_EditValueChanged);
             // 
             // DISTANCE1
             // 
@@ -263,6 +278,7 @@
             this.DISTANCE1.Name = "DISTANCE1";
             this.DISTANCE1.Size = new System.Drawing.Size(148, 24);
             this.DISTANCE1.TabIndex = 18;
+            this.DISTANCE1.EditValueChanged += new System.EventHandler(this.DISTANCE1_EditValueChanged);
             // 
             // labelControl32
             // 
@@ -364,13 +380,6 @@
             this.labelControl21.TabIndex = 4;
             this.labelControl21.Text = "检测技术：";
             // 
-            // CHECK_TM
-            // 
-            this.CHECK_TM.Location = new System.Drawing.Point(1013, 126);
-            this.CHECK_TM.Name = "CHECK_TM";
-            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
-            this.CHECK_TM.TabIndex = 17;
-            // 
             // labelControl20
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -401,14 +410,14 @@
             // 
             // ENTERING_PERSON
             // 
-            this.ENTERING_PERSON.Location = new System.Drawing.Point(1013, 71);
+            this.ENTERING_PERSON.Location = new System.Drawing.Point(567, 72);
             this.ENTERING_PERSON.Name = "ENTERING_PERSON";
             this.ENTERING_PERSON.Size = new System.Drawing.Size(185, 24);
             this.ENTERING_PERSON.TabIndex = 7;
             // 
             // TEAM_LEADER
             // 
-            this.TEAM_LEADER.Location = new System.Drawing.Point(567, 71);
+            this.TEAM_LEADER.Location = new System.Drawing.Point(1013, 71);
             this.TEAM_LEADER.Name = "TEAM_LEADER";
             this.TEAM_LEADER.Size = new System.Drawing.Size(185, 24);
             this.TEAM_LEADER.TabIndex = 6;
@@ -460,6 +469,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1333, 79);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // simpleButton2
             // 
@@ -470,6 +480,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(141, 53);
             this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "返回";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -480,6 +491,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(141, 53);
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "保存";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl16
             // 
@@ -522,26 +534,15 @@
             this.labelControl19.TabIndex = 6;
             this.labelControl19.Text = "吊挂设备：";
             // 
-            // LATHE_NAME
-            // 
-            this.LATHE_NAME.Location = new System.Drawing.Point(171, 60);
-            this.LATHE_NAME.Name = "LATHE_NAME";
-            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
-            this.LATHE_NAME.TabIndex = 13;
-            // 
-            // COLUMN_NAME
-            // 
-            this.COLUMN_NAME.Location = new System.Drawing.Point(566, 60);
-            this.COLUMN_NAME.Name = "COLUMN_NAME";
-            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
-            this.COLUMN_NAME.TabIndex = 14;
-            // 
             // REPAIR_NAME
             // 
             this.REPAIR_NAME.Location = new System.Drawing.Point(1013, 60);
             this.REPAIR_NAME.Name = "REPAIR_NAME";
             this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
             this.REPAIR_NAME.TabIndex = 15;
+            this.REPAIR_NAME.EditValueChanged += new System.EventHandler(this.REPAIR_NAME_EditValueChanged);
+            this.REPAIR_NAME.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.REPAIR_NAME_EditValueChanging);
+            this.REPAIR_NAME.TextChanged += new System.EventHandler(this.REPAIR_NAME_TextChanged);
             // 
             // CARNAME
             // 
@@ -549,13 +550,6 @@
             this.CARNAME.Name = "CARNAME";
             this.CARNAME.Size = new System.Drawing.Size(185, 24);
             this.CARNAME.TabIndex = 16;
-            // 
-            // EQUIMENT_NAME
-            // 
-            this.EQUIMENT_NAME.Location = new System.Drawing.Point(567, 126);
-            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
-            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
-            this.EQUIMENT_NAME.TabIndex = 17;
             // 
             // groupControl2
             // 
@@ -568,10 +562,10 @@
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
             this.groupControl2.Controls.Add(this.CHECK_TM);
             this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
-            this.groupControl2.Controls.Add(this.CARNAME);
-            this.groupControl2.Controls.Add(this.REPAIR_NAME);
             this.groupControl2.Controls.Add(this.COLUMN_NAME);
             this.groupControl2.Controls.Add(this.LATHE_NAME);
+            this.groupControl2.Controls.Add(this.CARNAME);
+            this.groupControl2.Controls.Add(this.REPAIR_NAME);
             this.groupControl2.Controls.Add(this.labelControl19);
             this.groupControl2.Controls.Add(this.labelControl18);
             this.groupControl2.Controls.Add(this.labelControl17);
@@ -584,6 +578,55 @@
             this.groupControl2.Size = new System.Drawing.Size(1333, 202);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "列车信息";
+            // 
+            // CHECK_TM
+            // 
+            this.CHECK_TM.EditValue = null;
+            this.CHECK_TM.Location = new System.Drawing.Point(1013, 126);
+            this.CHECK_TM.Name = "CHECK_TM";
+            this.CHECK_TM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CHECK_TM.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CHECK_TM.Properties.DisplayFormat.FormatString = "";
+            this.CHECK_TM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.CHECK_TM.Properties.EditFormat.FormatString = "";
+            this.CHECK_TM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.CHECK_TM.Properties.Mask.EditMask = "";
+            this.CHECK_TM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.CHECK_TM.Size = new System.Drawing.Size(185, 24);
+            this.CHECK_TM.TabIndex = 17;
+            // 
+            // EQUIMENT_NAME
+            // 
+            this.EQUIMENT_NAME.Location = new System.Drawing.Point(567, 126);
+            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
+            this.EQUIMENT_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EQUIMENT_NAME.Properties.NullText = "";
+            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
+            this.EQUIMENT_NAME.TabIndex = 17;
+            // 
+            // COLUMN_NAME
+            // 
+            this.COLUMN_NAME.Location = new System.Drawing.Point(566, 60);
+            this.COLUMN_NAME.Name = "COLUMN_NAME";
+            this.COLUMN_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.COLUMN_NAME.Properties.NullText = "";
+            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
+            this.COLUMN_NAME.TabIndex = 14;
+            this.COLUMN_NAME.EditValueChanged += new System.EventHandler(this.COLUMN_NAME_EditValueChanged);
+            // 
+            // LATHE_NAME
+            // 
+            this.LATHE_NAME.Location = new System.Drawing.Point(171, 60);
+            this.LATHE_NAME.Name = "LATHE_NAME";
+            this.LATHE_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LATHE_NAME.Properties.NullText = "";
+            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
+            this.LATHE_NAME.TabIndex = 13;
             // 
             // labelControl13
             // 
@@ -599,6 +642,12 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormFaultInfoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -613,17 +662,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Detection_Technology_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DEPTH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FAULT_POSITION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FAULT_BEAMID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHASE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LENGTH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Detection_Technology_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
@@ -631,14 +679,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,11 +703,8 @@
         private DevExpress.XtraEditors.TextEdit PHASE;
         private DevExpress.XtraEditors.TextEdit LENGTH;
         private DevExpress.XtraEditors.TextEdit DISTANCE2;
-        private DevExpress.XtraEditors.TextEdit Detection_Technology_NAME;
         private DevExpress.XtraEditors.TextEdit INCREASE;
-        private DevExpress.XtraEditors.TextEdit IF_PENETRATION;
         private DevExpress.XtraEditors.TextEdit DISTANCE1;
-        private DevExpress.XtraEditors.TextEdit CHECK_TM;
         private DevExpress.XtraEditors.LabelControl labelControl32;
         private DevExpress.XtraEditors.LabelControl labelControl29;
         private DevExpress.XtraEditors.LabelControl labelControl28;
@@ -677,11 +725,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.TextEdit LATHE_NAME;
-        private DevExpress.XtraEditors.TextEdit COLUMN_NAME;
         private DevExpress.XtraEditors.TextEdit REPAIR_NAME;
         private DevExpress.XtraEditors.TextEdit CARNAME;
-        private DevExpress.XtraEditors.TextEdit EQUIMENT_NAME;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -695,5 +740,13 @@
         private DevExpress.XtraEditors.TextEdit INVESTIGATOR;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraEditors.LookUpEdit LATHE_NAME;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.LookUpEdit COLUMN_NAME;
+        private DevExpress.XtraEditors.LookUpEdit EQUIMENT_NAME;
+        private DevExpress.XtraEditors.DateEdit CHECK_TM;
+        private DevExpress.XtraEditors.LookUpEdit Detection_Technology_NAME;
+        private DevExpress.XtraEditors.ComboBoxEdit IF_PENETRATION;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

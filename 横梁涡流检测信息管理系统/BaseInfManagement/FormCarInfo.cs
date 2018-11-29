@@ -78,6 +78,11 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             gridView4.OptionsMenu.EnableColumnMenu = false;
             gridView4.Columns[0].Visible = false;
 
+
+            gridControl1.UseEmbeddedNavigator = true;//设置滑动条
+            gridControl2.UseEmbeddedNavigator = true;//设置滑动条
+            gridControl3.UseEmbeddedNavigator = true;//设置滑动条
+            gridControl4.UseEmbeddedNavigator = true;//设置滑动条
         }
         //设置面板信息 
         private void GetAllUserinfo(string strsql, GridControl gridControl1)
@@ -91,7 +96,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         }
 
         //刷新面板显示所有信息
-        private void FreshForm()
+        public void FreshForm()
         {
             this.GetAllUserinfo(this.list1, gridControl1);
             this.GetAllUserinfo(this.list2, gridControl2);
@@ -164,7 +169,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     }
                     if (MessageBox.Show("确认删除车型信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                     {
-                         LatheDao dao = new LatheDao();
+                        LatheDao dao = new LatheDao();
                         string LATHE_ID = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString();
                          if (dao.delete(LATHE_ID))
                          {

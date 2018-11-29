@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
+using EddyCurrentTesting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁, fi.[DISTANCE1] as 一位测距,fi.[DISTANCE2] as 二位测距,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
             ",dt.[Detection_Technology_NAME] as 检测技术 " +
             " ,fi.[INCREASE] as 信号幅值, fi.[PHASE] as 信号相位, " +
-            " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班组长, fi.[ENTERING_PERSON] as 录入人" +
+            " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班组长, fi.[ENTERING_PERSON] as 录入人 " +
+            ",fi.[LATHE_ID] as 车型编号,fi.[COLUMN_ID] as 车列编号,fi.[EQUIMENT_ID] as 吊挂设备编号,fi.[DetectionTechnology_ID] as 检测技术编号" +
             " from FAULT_INFO fi " +
             "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
              "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
              "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
-            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID"
+            "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID " +
+            "order by FAULT_ID desc"
            ;
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         public FormFaultInfo()
@@ -35,7 +38,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             this.gridView1.OptionsView.ShowGroupPanel = false;
             FreshForm();
             //行高22
-            gridView1.RowHeight = 32;
+            gridView1.RowHeight = 40;
             //不允许编辑
             gridView1.OptionsBehavior.Editable = false;
             //不允许用户拖动列和
@@ -43,6 +46,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //不显示右键菜单
             gridView1.OptionsMenu.EnableColumnMenu = false;
 
+
+            gridControl1.UseEmbeddedNavigator = true;//设置滑动条
+            gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
+            gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            gridControl1.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+             gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            //gridControl1.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.End;
+            gridControl1.EmbeddedNavigator.Dock = DockStyle.Bottom;
         }
 
         //设置面板信息
@@ -57,7 +68,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         }
 
         //刷新面板显示所有信息
-        private void FreshForm()
+        public void FreshForm()
         {
             this.GetAllFaultinfo(gs_carlist, gridControl1);
         }
@@ -113,7 +124,13 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 dic.Add("探伤工", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[17]).ToString());
                 dic.Add("班主长", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[18]).ToString());
                 dic.Add("录入人", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[19]).ToString());
-                
+
+               
+                 dic.Add("车型编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[20]).ToString());
+                dic.Add("车列编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[21]).ToString());
+                dic.Add("吊挂设备编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[22]).ToString());
+                dic.Add("检测技术编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[23]).ToString());
+
                 FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, dic);
                 frm.Owner = this;
                 frm.ShowDialog();
@@ -144,21 +161,22 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     {
                         if (MessageBox.Show("确认删除故障信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
+                            FaultInfoDao dao = new FaultInfoDao();
+                            string Fault_ID = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString();
+                            if (dao.delete(Fault_ID))
                             {
-                                MessageBox.Show("成功删除");
                                 FreshForm();
-                            }*/
+                            }
                         }
                     }
                 }
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("删除失败，这条数据被其他数据所引用，请先删除使用了该数据的子信息！\n\n详细信息：\n" + ex.Message, "提示信息");
+                MessageBox.Show("删除失败，详细信息：\n" + ex.Message, "提示信息");
                 return;
             }
+
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -183,5 +201,18 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             }
             FreshForm();
         }
+        public void openAdd(object sender, EventArgs e)
+        {
+            this.添加ToolStripMenuItem_Click( sender, e);
+        }
+        public void openModify(object sender, EventArgs e)
+        {
+            this.修改ToolStripMenuItem_Click(sender, e);
+        }
+        public void openDelete(object sender, EventArgs e)
+        {
+            this.删除ToolStripMenuItem_Click(sender, e);
+        }
+
     }
 }
