@@ -131,6 +131,12 @@
     <Compile Include="BaseInfManagement\FormLatheInfoEdit.Designer.cs">
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInfManagement\FrmEditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfManagement\FrmEditPassword.Designer.cs">
+      <DependentUpon>FrmEditPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dao\FaultInfoDao.cs" />
     <Compile Include="Dao\DETECTION_TECHNOLOGYInDao.cs" />
     <Compile Include="Dao\LatheColumnDao.cs" />
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInfManagement\FormLatheInfoEdit.resx">
       <DependentUpon>FormLatheInfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfManagement\FrmEditPassword.resx">
+      <DependentUpon>FrmEditPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_main.resx">
       <DependentUpon>Frm_main.cs</DependentUpon>

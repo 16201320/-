@@ -30,6 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFaultInfoEdit));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.ENTERING_PERSON = new DevExpress.XtraEditors.TextEdit();
+            this.TEAM_LEADER = new DevExpress.XtraEditors.TextEdit();
+            this.INVESTIGATOR = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.IF_PENETRATION = new DevExpress.XtraEditors.ComboBoxEdit();
             this.Detection_Technology_NAME = new DevExpress.XtraEditors.LookUpEdit();
@@ -56,32 +69,26 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.ENTERING_PERSON = new DevExpress.XtraEditors.TextEdit();
-            this.TEAM_LEADER = new DevExpress.XtraEditors.TextEdit();
-            this.INVESTIGATOR = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.CARNAME = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.CHECK_TM = new DevExpress.XtraEditors.DateEdit();
             this.EQUIMENT_NAME = new DevExpress.XtraEditors.LookUpEdit();
             this.COLUMN_NAME = new DevExpress.XtraEditors.LookUpEdit();
             this.LATHE_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.CARNAME = new DevExpress.XtraEditors.TextEdit();
+            this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
@@ -94,14 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties.CalendarTimeProperties)).BeginInit();
@@ -109,8 +108,122 @@
             ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.simpleButton2);
+            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 691);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1333, 79);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(687, 14);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(141, 53);
+            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.Text = "返回";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(417, 14);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(141, 53);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "保存";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImage")));
+            this.groupControl4.Controls.Add(this.ENTERING_PERSON);
+            this.groupControl4.Controls.Add(this.TEAM_LEADER);
+            this.groupControl4.Controls.Add(this.INVESTIGATOR);
+            this.groupControl4.Controls.Add(this.labelControl3);
+            this.groupControl4.Controls.Add(this.labelControl2);
+            this.groupControl4.Controls.Add(this.labelControl1);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl4.Location = new System.Drawing.Point(0, 549);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(1333, 142);
+            this.groupControl4.TabIndex = 3;
+            this.groupControl4.Text = "人员信息";
+            // 
+            // ENTERING_PERSON
+            // 
+            this.ENTERING_PERSON.Location = new System.Drawing.Point(567, 72);
+            this.ENTERING_PERSON.Name = "ENTERING_PERSON";
+            this.ENTERING_PERSON.Size = new System.Drawing.Size(185, 24);
+            this.ENTERING_PERSON.TabIndex = 7;
+            // 
+            // TEAM_LEADER
+            // 
+            this.TEAM_LEADER.Location = new System.Drawing.Point(1013, 71);
+            this.TEAM_LEADER.Name = "TEAM_LEADER";
+            this.TEAM_LEADER.Size = new System.Drawing.Size(185, 24);
+            this.TEAM_LEADER.TabIndex = 6;
+            // 
+            // INVESTIGATOR
+            // 
+            this.INVESTIGATOR.Location = new System.Drawing.Point(161, 71);
+            this.INVESTIGATOR.Name = "INVESTIGATOR";
+            this.INVESTIGATOR.Size = new System.Drawing.Size(185, 24);
+            this.INVESTIGATOR.TabIndex = 5;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(883, 64);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(122, 31);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "班 组 长：";
+            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(436, 64);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(122, 31);
+            this.labelControl2.TabIndex = 3;
+            this.labelControl2.Text = "录 入 人：";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(42, 64);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(122, 31);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "探 伤 员：";
             // 
             // groupControl1
             // 
@@ -380,177 +493,6 @@
             this.labelControl21.TabIndex = 4;
             this.labelControl21.Text = "检测技术：";
             // 
-            // labelControl20
-            // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(882, 118);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(135, 31);
-            this.labelControl20.TabIndex = 3;
-            this.labelControl20.Text = "检查时间：";
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl4.AppearanceCaption.Options.UseFont = true;
-            this.groupControl4.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImage")));
-            this.groupControl4.Controls.Add(this.ENTERING_PERSON);
-            this.groupControl4.Controls.Add(this.TEAM_LEADER);
-            this.groupControl4.Controls.Add(this.INVESTIGATOR);
-            this.groupControl4.Controls.Add(this.labelControl3);
-            this.groupControl4.Controls.Add(this.labelControl2);
-            this.groupControl4.Controls.Add(this.labelControl1);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(0, 549);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1333, 142);
-            this.groupControl4.TabIndex = 3;
-            this.groupControl4.Text = "人员信息";
-            // 
-            // ENTERING_PERSON
-            // 
-            this.ENTERING_PERSON.Location = new System.Drawing.Point(567, 72);
-            this.ENTERING_PERSON.Name = "ENTERING_PERSON";
-            this.ENTERING_PERSON.Size = new System.Drawing.Size(185, 24);
-            this.ENTERING_PERSON.TabIndex = 7;
-            // 
-            // TEAM_LEADER
-            // 
-            this.TEAM_LEADER.Location = new System.Drawing.Point(1013, 71);
-            this.TEAM_LEADER.Name = "TEAM_LEADER";
-            this.TEAM_LEADER.Size = new System.Drawing.Size(185, 24);
-            this.TEAM_LEADER.TabIndex = 6;
-            // 
-            // INVESTIGATOR
-            // 
-            this.INVESTIGATOR.Location = new System.Drawing.Point(161, 71);
-            this.INVESTIGATOR.Name = "INVESTIGATOR";
-            this.INVESTIGATOR.Size = new System.Drawing.Size(185, 24);
-            this.INVESTIGATOR.TabIndex = 5;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(883, 64);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(122, 31);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "班 组 长：";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(436, 64);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(122, 31);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "录 入 人：";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(42, 64);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(122, 31);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "探 伤 员：";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.simpleButton2);
-            this.panel1.Controls.Add(this.simpleButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 691);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1333, 79);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(687, 14);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(141, 53);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "返回";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(417, 14);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(141, 53);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "保存";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(436, 52);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(130, 31);
-            this.labelControl16.TabIndex = 3;
-            this.labelControl16.Text = "列       号：";
-            this.labelControl16.Click += new System.EventHandler(this.labelControl16_Click);
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(883, 52);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(130, 31);
-            this.labelControl17.TabIndex = 4;
-            this.labelControl17.Text = "修       程：";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(42, 118);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(123, 31);
-            this.labelControl18.TabIndex = 5;
-            this.labelControl18.Text = "车      号：";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(436, 118);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(135, 31);
-            this.labelControl19.TabIndex = 6;
-            this.labelControl19.Text = "吊挂设备：";
-            // 
-            // REPAIR_NAME
-            // 
-            this.REPAIR_NAME.Location = new System.Drawing.Point(1013, 60);
-            this.REPAIR_NAME.Name = "REPAIR_NAME";
-            this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
-            this.REPAIR_NAME.TabIndex = 15;
-            this.REPAIR_NAME.EditValueChanged += new System.EventHandler(this.REPAIR_NAME_EditValueChanged);
-            this.REPAIR_NAME.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.REPAIR_NAME_EditValueChanging);
-            this.REPAIR_NAME.TextChanged += new System.EventHandler(this.REPAIR_NAME_TextChanged);
-            // 
-            // CARNAME
-            // 
-            this.CARNAME.Location = new System.Drawing.Point(172, 126);
-            this.CARNAME.Name = "CARNAME";
-            this.CARNAME.Size = new System.Drawing.Size(185, 24);
-            this.CARNAME.TabIndex = 16;
-            // 
             // groupControl2
             // 
             this.groupControl2.Appearance.Font = new System.Drawing.Font("黑体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
@@ -628,6 +570,64 @@
             this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
             this.LATHE_NAME.TabIndex = 13;
             // 
+            // CARNAME
+            // 
+            this.CARNAME.Location = new System.Drawing.Point(172, 126);
+            this.CARNAME.Name = "CARNAME";
+            this.CARNAME.Size = new System.Drawing.Size(185, 24);
+            this.CARNAME.TabIndex = 16;
+            // 
+            // REPAIR_NAME
+            // 
+            this.REPAIR_NAME.Location = new System.Drawing.Point(1013, 60);
+            this.REPAIR_NAME.Name = "REPAIR_NAME";
+            this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
+            this.REPAIR_NAME.TabIndex = 15;
+            this.REPAIR_NAME.EditValueChanged += new System.EventHandler(this.REPAIR_NAME_EditValueChanged);
+            this.REPAIR_NAME.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.REPAIR_NAME_EditValueChanging);
+            this.REPAIR_NAME.TextChanged += new System.EventHandler(this.REPAIR_NAME_TextChanged);
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl19.Appearance.Options.UseFont = true;
+            this.labelControl19.Location = new System.Drawing.Point(436, 118);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(135, 31);
+            this.labelControl19.TabIndex = 6;
+            this.labelControl19.Text = "吊挂设备：";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl18.Appearance.Options.UseFont = true;
+            this.labelControl18.Location = new System.Drawing.Point(42, 118);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(123, 31);
+            this.labelControl18.TabIndex = 5;
+            this.labelControl18.Text = "车      号：";
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl17.Appearance.Options.UseFont = true;
+            this.labelControl17.Location = new System.Drawing.Point(883, 52);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(130, 31);
+            this.labelControl17.TabIndex = 4;
+            this.labelControl17.Text = "修       程：";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(436, 52);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(130, 31);
+            this.labelControl16.TabIndex = 3;
+            this.labelControl16.Text = "列       号：";
+            this.labelControl16.Click += new System.EventHandler(this.labelControl16_Click);
+            // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -638,15 +638,15 @@
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "车      型：";
             // 
-            // defaultLookAndFeel1
+            // labelControl20
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelControl20.Appearance.Options.UseFont = true;
+            this.labelControl20.Location = new System.Drawing.Point(882, 118);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(135, 31);
+            this.labelControl20.TabIndex = 3;
+            this.labelControl20.Text = "检查时间：";
             // 
             // FormFaultInfoEdit
             // 
@@ -659,6 +659,14 @@
             this.Controls.Add(this.groupControl2);
             this.Name = "FormFaultInfoEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -672,15 +680,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ENTERING_PERSON.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TEAM_LEADER.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.INVESTIGATOR.Properties)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -689,7 +688,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
