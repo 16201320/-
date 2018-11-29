@@ -118,8 +118,8 @@ namespace EddyCurrentTesting
                                 " DetectionTechnology_ID = @Detection_Technology_NAME, FAULT_BEAMID = @FAULT_BEAMID," +
                                 " DISTANCE1 = @DISTANCE1,  DISTANCE2 = @DISTANCE2,  FAULT_POSITION= @FAULT_POSITION," +
                                  "   LENGTH = @LENGTH,  DEPTH = @DEPTH," +
-                                  " INCREASE = @INCREASE,  PHASE = PHASE,IF_PENETRATION = @IF_PENETRATION," +
-                                  " INVESTIGATOR = @INVESTIGATOR,  ENTERING_PERSON = ENTERING_PERSON,TEAM_LEADER = @TEAM_LEADER" +
+                                  " INCREASE = @INCREASE,  PHASE = @PHASE,IF_PENETRATION = @IF_PENETRATION," +
+                                  " INVESTIGATOR = @INVESTIGATOR,  ENTERING_PERSON = @ENTERING_PERSON,TEAM_LEADER = @TEAM_LEADER" +
                                 " where FAULT_ID = @FAULT_ID ";
 
 
