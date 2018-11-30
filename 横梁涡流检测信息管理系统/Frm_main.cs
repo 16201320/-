@@ -210,5 +210,11 @@ namespace 横梁涡流检测信息管理系统
             FrmEditPassword frm = new FrmEditPassword();
             frm.ShowDialog();
         }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmAccountEdit frm = new FrmAccountEdit();
+            frm.ShowDialog();
+        }
     }
 }

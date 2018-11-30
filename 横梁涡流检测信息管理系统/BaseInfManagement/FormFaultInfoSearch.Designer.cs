@@ -47,7 +47,6 @@
             this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
             this.INCREASE = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
-            this.IF_PENETRATION = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
             this.DISTANCE1 = new DevExpress.XtraEditors.TextEdit();
             this.CHECK_TM = new DevExpress.XtraEditors.TextEdit();
@@ -67,12 +66,13 @@
             this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.EQUIMENT_NAME = new DevExpress.XtraEditors.TextEdit();
             this.CARNAME = new DevExpress.XtraEditors.TextEdit();
             this.REPAIR_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.COLUMN_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.LATHE_NAME = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
+            this.LATHE_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.COLUMN_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.EQUIMENT_NAME = new DevExpress.XtraEditors.LookUpEdit();
+            this.IF_PENETRATION = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit15.Properties)).BeginInit();
@@ -90,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).BeginInit();
@@ -106,12 +105,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -136,9 +136,9 @@
             this.groupControl3.Controls.Add(this.checkEdit9);
             this.groupControl3.Controls.Add(this.INCREASE);
             this.groupControl3.Controls.Add(this.checkEdit8);
-            this.groupControl3.Controls.Add(this.IF_PENETRATION);
             this.groupControl3.Controls.Add(this.checkEdit7);
             this.groupControl3.Controls.Add(this.DISTANCE1);
+            this.groupControl3.Controls.Add(this.IF_PENETRATION);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(2, 113);
             this.groupControl3.Name = "groupControl3";
@@ -154,6 +154,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(130, 54);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "查找";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // checkEdit15
             // 
@@ -283,13 +284,6 @@
             this.checkEdit8.Properties.Caption = "是否贯穿：";
             this.checkEdit8.Size = new System.Drawing.Size(92, 25);
             this.checkEdit8.TabIndex = 6;
-            // 
-            // IF_PENETRATION
-            // 
-            this.IF_PENETRATION.Location = new System.Drawing.Point(1264, 107);
-            this.IF_PENETRATION.Name = "IF_PENETRATION";
-            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
-            this.IF_PENETRATION.TabIndex = 19;
             // 
             // checkEdit7
             // 
@@ -423,13 +417,13 @@
             this.groupControl2.Controls.Add(this.checkEdit4);
             this.groupControl2.Controls.Add(this.checkEdit1);
             this.groupControl2.Controls.Add(this.checkEdit3);
-            this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
             this.groupControl2.Controls.Add(this.CARNAME);
             this.groupControl2.Controls.Add(this.REPAIR_NAME);
-            this.groupControl2.Controls.Add(this.COLUMN_NAME);
-            this.groupControl2.Controls.Add(this.LATHE_NAME);
             this.groupControl2.Controls.Add(this.checkEdit6);
             this.groupControl2.Controls.Add(this.CHECK_TM);
+            this.groupControl2.Controls.Add(this.LATHE_NAME);
+            this.groupControl2.Controls.Add(this.COLUMN_NAME);
+            this.groupControl2.Controls.Add(this.EQUIMENT_NAME);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
             this.groupControl2.Name = "groupControl2";
@@ -487,13 +481,6 @@
             this.checkEdit3.Size = new System.Drawing.Size(113, 25);
             this.checkEdit3.TabIndex = 5;
             // 
-            // EQUIMENT_NAME
-            // 
-            this.EQUIMENT_NAME.Location = new System.Drawing.Point(748, 70);
-            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
-            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
-            this.EQUIMENT_NAME.TabIndex = 17;
-            // 
             // CARNAME
             // 
             this.CARNAME.Location = new System.Drawing.Point(172, 70);
@@ -508,20 +495,6 @@
             this.REPAIR_NAME.Size = new System.Drawing.Size(185, 24);
             this.REPAIR_NAME.TabIndex = 15;
             // 
-            // COLUMN_NAME
-            // 
-            this.COLUMN_NAME.Location = new System.Drawing.Point(748, 43);
-            this.COLUMN_NAME.Name = "COLUMN_NAME";
-            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
-            this.COLUMN_NAME.TabIndex = 14;
-            // 
-            // LATHE_NAME
-            // 
-            this.LATHE_NAME.Location = new System.Drawing.Point(172, 41);
-            this.LATHE_NAME.Name = "LATHE_NAME";
-            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
-            this.LATHE_NAME.TabIndex = 13;
-            // 
             // checkEdit6
             // 
             this.checkEdit6.Location = new System.Drawing.Point(1145, 68);
@@ -531,6 +504,46 @@
             this.checkEdit6.Properties.Caption = "检查时间：";
             this.checkEdit6.Size = new System.Drawing.Size(113, 25);
             this.checkEdit6.TabIndex = 4;
+            // 
+            // LATHE_NAME
+            // 
+            this.LATHE_NAME.Location = new System.Drawing.Point(172, 41);
+            this.LATHE_NAME.Name = "LATHE_NAME";
+            this.LATHE_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LATHE_NAME.Properties.NullText = "";
+            this.LATHE_NAME.Size = new System.Drawing.Size(185, 24);
+            this.LATHE_NAME.TabIndex = 13;
+            // 
+            // COLUMN_NAME
+            // 
+            this.COLUMN_NAME.Location = new System.Drawing.Point(748, 43);
+            this.COLUMN_NAME.Name = "COLUMN_NAME";
+            this.COLUMN_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.COLUMN_NAME.Properties.NullText = "";
+            this.COLUMN_NAME.Size = new System.Drawing.Size(185, 24);
+            this.COLUMN_NAME.TabIndex = 14;
+            // 
+            // EQUIMENT_NAME
+            // 
+            this.EQUIMENT_NAME.Location = new System.Drawing.Point(748, 70);
+            this.EQUIMENT_NAME.Name = "EQUIMENT_NAME";
+            this.EQUIMENT_NAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EQUIMENT_NAME.Properties.NullText = "";
+            this.EQUIMENT_NAME.Size = new System.Drawing.Size(185, 24);
+            this.EQUIMENT_NAME.TabIndex = 17;
+            // 
+            // IF_PENETRATION
+            // 
+            this.IF_PENETRATION.Location = new System.Drawing.Point(1264, 107);
+            this.IF_PENETRATION.Name = "IF_PENETRATION";
+            this.IF_PENETRATION.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.IF_PENETRATION.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.IF_PENETRATION.Size = new System.Drawing.Size(185, 24);
+            this.IF_PENETRATION.TabIndex = 19;
             // 
             // FormFaultInfoSearch
             // 
@@ -557,7 +570,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.INCREASE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DISTANCE1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHECK_TM.Properties)).EndInit();
@@ -573,12 +585,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CARNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.REPAIR_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LATHE_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COLUMN_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EQUIMENT_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IF_PENETRATION.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -593,7 +606,6 @@
         private DevExpress.XtraEditors.TextEdit LENGTH;
         private DevExpress.XtraEditors.TextEdit DISTANCE2;
         private DevExpress.XtraEditors.TextEdit INCREASE;
-        private DevExpress.XtraEditors.TextEdit IF_PENETRATION;
         private DevExpress.XtraEditors.TextEdit DISTANCE1;
         private DevExpress.XtraEditors.TextEdit CHECK_TM;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -612,11 +624,8 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit4;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.CheckEdit checkEdit3;
-        private DevExpress.XtraEditors.TextEdit EQUIMENT_NAME;
         private DevExpress.XtraEditors.TextEdit CARNAME;
         private DevExpress.XtraEditors.TextEdit REPAIR_NAME;
-        private DevExpress.XtraEditors.TextEdit COLUMN_NAME;
-        private DevExpress.XtraEditors.TextEdit LATHE_NAME;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -628,5 +637,9 @@
         private System.Windows.Forms.ToolStripMenuItem 详细信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 缩略信息ToolStripMenuItem;
         private DevExpress.XtraEditors.CheckEdit checkEdit6;
+        private DevExpress.XtraEditors.LookUpEdit LATHE_NAME;
+        private DevExpress.XtraEditors.LookUpEdit COLUMN_NAME;
+        private DevExpress.XtraEditors.LookUpEdit EQUIMENT_NAME;
+        private DevExpress.XtraEditors.ComboBoxEdit IF_PENETRATION;
     }
 }

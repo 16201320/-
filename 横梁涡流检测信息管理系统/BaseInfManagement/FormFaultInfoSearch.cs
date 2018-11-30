@@ -1,5 +1,8 @@
-﻿using DevExpress.XtraGrid;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
+using EddyCurrentTesting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +30,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID " +
             "order by FAULT_ID desc"
            ;
+        FaultInfoDao dao = new FaultInfoDao();
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
         public FormFaultInfoSearch()
         {
@@ -44,7 +48,77 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //不显示右键菜单
             gridView1.OptionsMenu.EnableColumnMenu = false;
             gridControl1.UseEmbeddedNavigator = true;//设置滑动条
+
+
+            //设置下拉框内容
+            setLatheCombo();
+            setLatheColummn();
+            setEquipment();
+            //setTechnolog();
+            setPenetration();
         }
+
+        //获取车型列表
+        private void setLatheCombo()
+        {
+            DataSet ds = new DataSet();
+            ds = dao.getLatheList();
+            LATHE_NAME.Properties.NullText = "";
+            this.LATHE_NAME.Properties.DataSource = ds.Tables[0];
+            this.LATHE_NAME.Properties.ValueMember = "编号";
+            this.LATHE_NAME.Properties.DisplayMember = "车型";
+
+        }
+
+        //获取车列列表
+        private void setLatheColummn()
+        {
+            COLUMN_NAME.Properties.TextEditStyle = TextEditStyles.Standard;//设置可以编辑
+            COLUMN_NAME.Properties.PopupFilterMode = PopupFilterMode.Contains;//设置查找模式为包含
+            COLUMN_NAME.Properties.ImmediatePopup = true;
+            DataSet ds = new DataSet();
+            ds = dao.getLatheColummnList();
+            COLUMN_NAME.Properties.NullText = "";
+            this.COLUMN_NAME.Properties.DataSource = ds.Tables[0];
+            this.COLUMN_NAME.Properties.ValueMember = "编号";
+            this.COLUMN_NAME.Properties.DisplayMember = "车列";
+        }
+
+        //获取吊挂设备列表
+        private void setEquipment()
+        {
+            DataSet ds = new DataSet();
+            ds = dao.setEquipmentList();
+            EQUIMENT_NAME.Properties.NullText = "";
+            this.EQUIMENT_NAME.Properties.DataSource = ds.Tables[0];
+            this.EQUIMENT_NAME.Properties.ValueMember = "编号";
+            this.EQUIMENT_NAME.Properties.DisplayMember = "吊挂设备";
+        }
+
+       /* //获取检测技术列表
+        private void setTechnolog()
+        {
+            DataSet ds = new DataSet();
+            ds = dao.setTechnologList();
+            Detection_Technology_NAME.Properties.NullText = "";
+            this.Detection_Technology_NAME.Properties.DataSource = ds.Tables[0];
+            this.Detection_Technology_NAME.Properties.ValueMember = "编号";
+            this.Detection_Technology_NAME.Properties.DisplayMember = "检测技术";
+            //Detection_Technology_NAME.EditValue
+        }*/
+
+        //获取是否贯穿列表
+        private void setPenetration()
+        {
+            // IF_PENETRATION.Properties.TextEditStyle = TextEditStyles.Standard;
+            IF_PENETRATION.Properties.AutoComplete = true;
+            IF_PENETRATION.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll = IF_PENETRATION.Properties.Items;
+            coll.Add("是");
+            coll.Add("否");
+        }
+
+
 
         //设置面板信息
         private void GetAllUserinfo(string strsql, GridControl gridControl1)
@@ -192,6 +266,14 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             {
                 gridView1.Columns[i].Visible = false;
             }           
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            /*string newFilter = string.Empty;
+            string filter = gridView1.ActiveFilterString;
+            newFilter = filter.Replace("StartsWith", "Contains");
+            gridView1.ActiveFilterString = newFilter;*/
         }
     }
 }
