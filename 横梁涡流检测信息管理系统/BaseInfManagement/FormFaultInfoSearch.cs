@@ -19,16 +19,17 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
     public partial class FormFaultInfoSearch : Form
     {
         public string formName = "FormFaultInfoSearch";
-        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁, fi.[DISTANCE1] as 一位侧距,fi.[DISTANCE2] as 二位侧距,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
+        string gs_carlist = "select fi.[FAULT_ID] as 序号,  li.[LATHE_NAME] as 车型,lc.[COLUMN_NAME] as 列号,fi.[REPAIR_NAME] as 修程,fi.[CARNAME] as 车号,hi.[EQUIMENT_NAME] as 吊挂设备,fi.[CHECK_TM] as 检查时间,fi.[FAULT_BEAMID] as 故障横梁, fi.[DISTANCE1] as 一位测距,fi.[DISTANCE2] as 二位测距,fi.[FAULT_POSITION] as 缺陷位置, fi.[LENGTH] as 缺陷长度,fi.[DEPTH] as 缺陷深度,fi.[IF_PENETRATION] as 是否贯穿 " +
             ",dt.[Detection_Technology_NAME] as 检测技术 " +
             " ,fi.[INCREASE] as 信号幅值, fi.[PHASE] as 信号相位, " +
-            " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班组长, fi.[ENTERING_PERSON] as 录入人" +
+            " fi.[INVESTIGATOR] as 探伤工, fi.[TEAM_LEADER] as 班组长, fi.[ENTERING_PERSON] as 录入人 " +
+            ",fi.[LATHE_ID] as 车型编号,fi.[COLUMN_ID] as 车列编号,fi.[EQUIMENT_ID] as 吊挂设备编号,fi.[DetectionTechnology_ID] as 检测技术编号" +
             " from FAULT_INFO fi " +
             "inner join LATHE_INFO li on fi.LATHE_ID = li.LATHE_ID " +
              "inner join LATHE_COLUMN lc on fi.COLUMN_ID = lc.COLUMN_ID " +
              "inner join HOISTINGEQUIPMENT_INFO hi on fi.EQUIMENT_ID = hi.EQUIMENT_ID " +
             "inner join DETECTION_TECHNOLOGY dt on fi.DetectionTechnology_ID = dt.DetectionTechnology_ID " +
-            "order by FAULT_ID desc"
+            ""//"order by FAULT_ID desc"
            ;
         FaultInfoDao dao = new FaultInfoDao();
         string strOperationFlag = string.Empty;  //指示操作是“添加”还是“修改”
@@ -56,6 +57,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             setEquipment();
             //setTechnolog();
             setPenetration();
+            setcomboBoxEdit();
+
+
         }
 
         //获取车型列表
@@ -110,13 +114,76 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         //获取是否贯穿列表
         private void setPenetration()
         {
-            // IF_PENETRATION.Properties.TextEditStyle = TextEditStyles.Standard;
+            //IF_PENETRATION.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
             IF_PENETRATION.Properties.AutoComplete = true;
             IF_PENETRATION.Properties.CycleOnDblClick = true;
             ComboBoxItemCollection coll = IF_PENETRATION.Properties.Items;
             coll.Add("是");
             coll.Add("否");
         }
+
+        private void setcomboBoxEdit()
+        {
+            comboBoxEdit1.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit1.Properties.AutoComplete = true;
+            comboBoxEdit1.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll1 = comboBoxEdit1.Properties.Items;
+            coll1.Add("<");
+            coll1.Add("=");
+            coll1.Add(">");
+            comboBoxEdit2.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit2.Properties.AutoComplete = true;
+            comboBoxEdit2.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll2 = comboBoxEdit2.Properties.Items;
+            coll2.Add("<");
+            coll2.Add("=");
+            coll2.Add(">");
+            comboBoxEdit3.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit3.Properties.AutoComplete = true;
+            comboBoxEdit3.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll3 = comboBoxEdit3.Properties.Items;
+            coll3.Add("<");
+            coll3.Add("=");
+            coll3.Add(">");
+            comboBoxEdit4.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit4.Properties.AutoComplete = true;
+            comboBoxEdit4.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll4 = comboBoxEdit4.Properties.Items;
+            coll4.Add("<");
+            coll4.Add("=");
+            coll4.Add(">");
+            comboBoxEdit5.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit5.Properties.AutoComplete = true;
+            comboBoxEdit5.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll5 = comboBoxEdit5.Properties.Items;
+            coll5.Add("<");
+            coll5.Add("=");
+            coll5.Add(">");
+            comboBoxEdit6.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit6.Properties.AutoComplete = true;
+            comboBoxEdit6.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll6 = comboBoxEdit6.Properties.Items;
+            coll6.Add("<");
+            coll6.Add("=");
+            coll6.Add(">");
+            comboBoxEdit7.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
+            comboBoxEdit7.Properties.AutoComplete = true;
+            comboBoxEdit7.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll7 = comboBoxEdit7.Properties.Items;
+            coll7.Add("一天");
+            coll7.Add("一段");
+            
+
+            comboBoxEdit1.SelectedIndex = 1;
+            comboBoxEdit2.SelectedIndex = 1;
+            comboBoxEdit3.SelectedIndex = 1;
+            comboBoxEdit4.SelectedIndex = 1;
+            comboBoxEdit5.SelectedIndex = 1;
+            comboBoxEdit6.SelectedIndex = 1;
+            comboBoxEdit6.SelectedIndex = 1;
+            comboBoxEdit7.SelectedIndex = 0;
+        }
+        
 
 
 
@@ -190,6 +257,12 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 dic.Add("班主长", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[18]).ToString());
                 dic.Add("录入人", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[19]).ToString());
 
+
+                dic.Add("车型编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[20]).ToString());
+                dic.Add("车列编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[21]).ToString());
+                dic.Add("吊挂设备编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[22]).ToString());
+                dic.Add("检测技术编号", this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[23]).ToString());
+
                 FormFaultInfoEdit frm = new FormFaultInfoEdit(strOperationFlag, dic);
                 frm.Owner = this;
                 frm.ShowDialog();
@@ -220,19 +293,19 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                     {
                         if (MessageBox.Show("确认删除故障信息", "确认信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                         {
-                            /*tring strCarId = this.dgv_carlist.Rows[this.dgv_carlist.SelectedCells[0].RowIndex].Cells["车号编号"].Value.ToString().Trim();
-                            if (dao.deleteCar(strCarId))
+                            FaultInfoDao dao = new FaultInfoDao();
+                            string Fault_ID = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, this.gridView1.Columns[0]).ToString();
+                            if (dao.delete(Fault_ID))
                             {
-                                MessageBox.Show("成功删除");
                                 FreshForm();
-                            }*/
+                            }
                         }
                     }
                 }
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("删除失败，这条数据被其他数据所引用，请先删除使用了该数据的子信息！\n\n详细信息：\n" + ex.Message, "提示信息");
+                MessageBox.Show("删除失败，详细信息：\n" + ex.Message, "提示信息");
                 return;
             }
         }
@@ -274,6 +347,160 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             string filter = gridView1.ActiveFilterString;
             newFilter = filter.Replace("StartsWith", "Contains");
             gridView1.ActiveFilterString = newFilter;*/
+            string sqlfind = "where ";
+            //车型
+            if (checkEdit1.Checked == true && this.LATHE_NAME.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "li.LATHE_NAME like '%" + LATHE_NAME.Text + "%'";
+            }
+            //车列
+            if (checkEdit2.Checked == true && this.COLUMN_NAME.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "lc.COLUMN_NAME like '%" + COLUMN_NAME.Text + "%'";
+            }
+            //修程
+            if (checkEdit3.Checked == true && this.REPAIR_NAME.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.REPAIR_NAME like '%" + REPAIR_NAME.Text + "%'";
+            }
+            //车号
+            if (checkEdit4.Checked == true && this.CARNAME.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.CARNAME like '%" + this.CARNAME.Text + "%'";
+            }
+            //吊挂设备
+            if (checkEdit5.Checked == true && this.EQUIMENT_NAME.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "hi.EQUIMENT_NAME like '%" + this.EQUIMENT_NAME.Text + "%'";
+            }
+
+
+
+            //时间CHECK_TM
+            if (checkEdit6.Checked == true && this.CHECK_TM.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.CHECK_TM like '%" + this.CHECK_TM.Text + "%'";
+            }
+            //故障横梁号
+            if (checkEdit7.Checked == true && this.FAULT_BEAMID.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.FAULT_BEAMID like '%" + this.FAULT_BEAMID.Text + "%'";
+            }
+            //距1
+            if (checkEdit9.Checked == true && this.DISTANCE1.Text != "" && this.DISTANCE1.Text!="/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit1.Text;
+                sqlfind = sqlfind + " CAST(fi.DISTANCE1 AS numeric(10, 0)) " + c  +" "+ this.DISTANCE1.Text ;
+                //sqlfind = sqlfind + "fi.DISTANCE1 like '%" + this.DISTANCE1.Text + "%'";
+            }
+            //距2
+            if (checkEdit10.Checked == true && this.DISTANCE2.Text != "" && this.DISTANCE2.Text != "/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit2.Text;
+                sqlfind = sqlfind + " CAST(fi.DISTANCE2 AS numeric(10, 0)) " + c + " " + this.DISTANCE2.Text;
+                //sqlfind = sqlfind + "fi.DISTANCE2 like '%" + this.DISTANCE2.Text + "%'";
+            }
+
+
+            //故障位置
+            if (checkEdit11.Checked == true && this.FAULT_POSITION.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.FAULT_POSITION like '%" + this.FAULT_POSITION.Text + "%'";
+            }
+            //长度
+            if (checkEdit12.Checked == true && this.LENGTH.Text != "" && this.LENGTH.Text != "/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit3.Text;
+                sqlfind = sqlfind + " CAST(fi.LENGTH AS numeric(10, 0)) " + c + " " + this.LENGTH.Text;
+               // sqlfind = sqlfind + "fi.LENGTH like '%" + this.LENGTH.Text + "%'";
+            }
+            //深度
+            if (checkEdit13.Checked == true && this.DEPTH.Text != "" && this.DEPTH.Text != "/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit4.Text;
+                sqlfind = sqlfind + " CAST(fi.DEPTH AS numeric(10, 0)) " + c + " " + this.DEPTH.Text;
+                //sqlfind = sqlfind + "fi.DEPTH like '%" + this.DEPTH.Text + "%'";
+            }
+            //幅值
+            if (checkEdit14.Checked == true && this.INCREASE.Text != "" && this.INCREASE.Text != "/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit5.Text;
+                sqlfind = sqlfind + " CAST(fi.INCREASE AS numeric(10, 0)) " + c + " " + this.INCREASE.Text;
+                //sqlfind = sqlfind + "fi.INCREASE like '%" + this.INCREASE.Text + "%'";
+            }
+            //相位
+            if (checkEdit15.Checked == true && this.PHASE.Text != "" && this.PHASE.Text != "/")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                string c = comboBoxEdit6.Text;
+                sqlfind = sqlfind + " CAST(fi.PHASE AS numeric(10, 0)) " + c + " " + this.PHASE.Text;
+               // sqlfind = sqlfind + "fi.PHASE like '%" + this.PHASE.Text + "%'";
+            }
+            //是否贯穿
+            if (checkEdit8.Checked == true && this.IF_PENETRATION.Text != "")
+            {
+                if (!sqlfind.Equals("where "))
+                    sqlfind = sqlfind + " and ";
+                sqlfind = sqlfind + "fi.IF_PENETRATION like '%" + this.IF_PENETRATION.Text + "%'";
+            }
+
+
+
+
+
+
+            if (!sqlfind.Equals("where "))
+                GetAllUserinfo(gs_carlist + sqlfind + " order by fi.[FAULT_ID] desc", gridControl1);
+            else
+                GetAllUserinfo(gs_carlist + " order by fi.[FAULT_ID] desc", gridControl1);
+
+
+
+
+
+
+        }
+
+        private void comboBoxEdit7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxEdit7.SelectedIndex == 0)
+            {
+                this.labelControl1.Visible = false;
+                this.CHECK_TM2.Visible = false;
+            }
+            else if(comboBoxEdit7.SelectedIndex == 1)
+            {
+                this.labelControl1.Visible = true;
+                this.CHECK_TM2.Visible = true;
+            }
+                
         }
     }
 }
