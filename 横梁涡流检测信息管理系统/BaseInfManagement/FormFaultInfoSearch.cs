@@ -58,8 +58,16 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //setTechnolog();
             setPenetration();
             setcomboBoxEdit();
-
-
+            //设置输入格式RegEx" UseMaskAsDisplayFormat="True" Mask="[0-9]*"
+            CHECK_TM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            FAULT_BEAMID.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            FAULT_BEAMID.Properties.Mask.EditMask = "[0-9]*";
+            DISTANCE1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            DISTANCE2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            LENGTH.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            DEPTH.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            INCREASE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            PHASE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
         }
 
         //获取车型列表
@@ -389,16 +397,36 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             //时间CHECK_TM
             if (checkEdit6.Checked == true && this.CHECK_TM.Text != "")
             {
-                if (!sqlfind.Equals("where "))
-                    sqlfind = sqlfind + " and ";
-                sqlfind = sqlfind + "fi.CHECK_TM like '%" + this.CHECK_TM.Text + "%'";
+                string[] t1 = CHECK_TM.Text.Split(' ')[0].Split('/');
+                string[] t2 = CHECK_TM2.Text.Split(' ')[0].Split('/');
+                switch (comboBoxEdit7.SelectedIndex)
+                {
+                    case 0:
+                        if (!sqlfind.Equals("where "))
+                            sqlfind = sqlfind + " and ";
+                        sqlfind = sqlfind + "year(fi.CHECK_TM) = " +t1[0]+ " and month(fi.CHECK_TM)= " + t1[1] + " and day(fi.CHECK_TM) = " + t1[2];
+                        break;
+                    case 1:
+                        string time1 = t1[0] + "-" + t1[1] + "-" + t1[2];
+                        string time2 = t2[0] + "-" + t2[1] + "-" + t2[2];
+                        if (!sqlfind.Equals("where "))
+                            sqlfind = sqlfind + " and ";
+                        sqlfind = sqlfind + "fi.CHECK_TM >= '"+time1+"' and fi.CHECK_TM <= '"+time2+"'";
+
+                        break;
+                }
             }
+
+
+            string a = FAULT_BEAMID.Text.Trim();
+            if (a.Length > 0 && a[a.Length - 1] == '_')
+                a = a.Substring(0, a.Length - 1);
             //故障横梁号
-            if (checkEdit7.Checked == true && this.FAULT_BEAMID.Text != "")
+            if (checkEdit7.Checked == true && a != "")
             {
                 if (!sqlfind.Equals("where "))
                     sqlfind = sqlfind + " and ";
-                sqlfind = sqlfind + "fi.FAULT_BEAMID like '%" + this.FAULT_BEAMID.Text + "%'";
+                sqlfind = sqlfind + "CAST(fi.FAULT_BEAMID AS numeric(10, 0)) =" + a ;
             }
             //距1
             if (checkEdit9.Checked == true && this.DISTANCE1.Text != "" && this.DISTANCE1.Text!="/")
@@ -406,7 +434,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 if (!sqlfind.Equals("where "))
                     sqlfind = sqlfind + " and ";
                 string c = comboBoxEdit1.Text;
-                sqlfind = sqlfind + " CAST(fi.DISTANCE1 AS numeric(10, 0)) " + c  +" "+ this.DISTANCE1.Text ;
+                sqlfind = sqlfind + " fi.DISTANCE1 != '/' and fi.DISTANCE1 != ''and CAST(fi.DISTANCE1 AS numeric(10, 0)) " + c  +" "+ this.DISTANCE1.Text ;
                 //sqlfind = sqlfind + "fi.DISTANCE1 like '%" + this.DISTANCE1.Text + "%'";
             }
             //距2
@@ -415,7 +443,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 if (!sqlfind.Equals("where "))
                     sqlfind = sqlfind + " and ";
                 string c = comboBoxEdit2.Text;
-                sqlfind = sqlfind + " CAST(fi.DISTANCE2 AS numeric(10, 0)) " + c + " " + this.DISTANCE2.Text;
+                sqlfind = sqlfind + " fi.DISTANCE2 != '/' and fi.DISTANCE2 != ''and CAST(fi.DISTANCE2 AS numeric(10, 0)) " + c + " " + this.DISTANCE2.Text;
                 //sqlfind = sqlfind + "fi.DISTANCE2 like '%" + this.DISTANCE2.Text + "%'";
             }
 
@@ -451,7 +479,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 if (!sqlfind.Equals("where "))
                     sqlfind = sqlfind + " and ";
                 string c = comboBoxEdit5.Text;
-                sqlfind = sqlfind + " CAST(fi.INCREASE AS numeric(10, 0)) " + c + " " + this.INCREASE.Text;
+                sqlfind = sqlfind + " fi.INCREASE != '/' and fi.INCREASE != ''and CAST(fi.INCREASE AS numeric(10, 0)) " + c + " " + this.INCREASE.Text;
                 //sqlfind = sqlfind + "fi.INCREASE like '%" + this.INCREASE.Text + "%'";
             }
             //相位
@@ -460,7 +488,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 if (!sqlfind.Equals("where "))
                     sqlfind = sqlfind + " and ";
                 string c = comboBoxEdit6.Text;
-                sqlfind = sqlfind + " CAST(fi.PHASE AS numeric(10, 0)) " + c + " " + this.PHASE.Text;
+                sqlfind = sqlfind + " fi.PHASE != '/' and fi.PHASE != ''and CAST(fi.PHASE AS numeric(10, 0)) " + c + " " + this.PHASE.Text;
                // sqlfind = sqlfind + "fi.PHASE like '%" + this.PHASE.Text + "%'";
             }
             //是否贯穿

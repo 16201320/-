@@ -191,11 +191,11 @@
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(172, 80);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(1264, 47);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(50, 24);
+            this.comboBoxEdit2.Size = new System.Drawing.Size(59, 24);
             this.comboBoxEdit2.TabIndex = 32;
             // 
             // comboBoxEdit4
@@ -264,9 +264,9 @@
             // 
             // FAULT_POSITION
             // 
-            this.FAULT_POSITION.Location = new System.Drawing.Point(228, 78);
+            this.FAULT_POSITION.Location = new System.Drawing.Point(172, 78);
             this.FAULT_POSITION.Name = "FAULT_POSITION";
-            this.FAULT_POSITION.Size = new System.Drawing.Size(129, 24);
+            this.FAULT_POSITION.Size = new System.Drawing.Size(185, 24);
             this.FAULT_POSITION.TabIndex = 27;
             // 
             // checkEdit13
@@ -332,9 +332,9 @@
             // 
             // DISTANCE2
             // 
-            this.DISTANCE2.Location = new System.Drawing.Point(1264, 48);
+            this.DISTANCE2.Location = new System.Drawing.Point(1329, 48);
             this.DISTANCE2.Name = "DISTANCE2";
-            this.DISTANCE2.Size = new System.Drawing.Size(185, 24);
+            this.DISTANCE2.Size = new System.Drawing.Size(120, 24);
             this.DISTANCE2.TabIndex = 23;
             // 
             // checkEdit9
