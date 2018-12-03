@@ -68,6 +68,8 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             DEPTH.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             INCREASE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             PHASE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+
+            详细信息ToolStripMenuItem_Click(new object() , new EventArgs() );
         }
 
         //获取车型列表
@@ -325,29 +327,36 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void 详细信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < gridView1.Columns.Count; i++)
+            for (int i = 0; i < 7; i++)
             {
                 gridView1.Columns[i].Visible = true;
             }
-            FreshForm();
-            for (int i = 7; i < gridView1.Columns.Count; i++)
+            for (int i = 19; i >= 7; i--)
             {
                 gridView1.Columns[i].Visible = true;
-            }          
+            }
+            for (int i = 20; i < gridView1.Columns.Count; i++)
+            {
+                gridView1.Columns[i].Visible = false;
+            }
         }
 
         private void 缩略信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < gridView1.Columns.Count; i++)
+            for (int i = 0; i < 7; i++)
             {
                 gridView1.Columns[i].Visible = true;
             }
-            FreshForm();
-            for (int i = 7; i < gridView1.Columns.Count; i++)
+            for (int i = 7; i < 20; i++)
             {
                 gridView1.Columns[i].Visible = false;
-            }           
+            }
+            for (int i = 20; i < gridView1.Columns.Count; i++)
+            {
+                gridView1.Columns[i].Visible = false;
+            }
         }
+
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {

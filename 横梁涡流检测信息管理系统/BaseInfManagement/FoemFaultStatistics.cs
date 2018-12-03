@@ -27,7 +27,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             GetLATHE_NAME3();
             this.FormBorderStyle = FormBorderStyle.None;
              this.TopLevel = false;
-            comboBoxEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
+           /* comboBoxEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
             comboBoxEdit1.Properties.AutoComplete = true;
             comboBoxEdit1.Properties.CycleOnDblClick = true;
             ComboBoxItemCollection coll = comboBoxEdit1.Properties.Items;
@@ -44,8 +44,8 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             finally
             {
                 coll.EndUpdate();
-            }
-            comboBoxEdit1.SelectedIndex = -1;
+            }*/
+           // comboBoxEdit1.SelectedIndex = -1;*/
             /*DataSet ds = new DataSet();
             ds = dao.List1();
             // riLookup.Columns [“Description”]。Visible = false;
@@ -60,7 +60,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         private void GetLATHE_NAME()
         {
             //lookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
-            lookUpEdit1.Properties.PopupFilterMode = PopupFilterMode.Contains;
+            /*lookUpEdit1.Properties.PopupFilterMode = PopupFilterMode.Contains;
             DataSet ds = new DataSet();
             ds = dao.getLatheList();
             // riLookup.Columns [“Description”]。Visible = false;
@@ -69,7 +69,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             this.lookUpEdit1.Properties.ValueMember = "LATHE_ID";
             this.lookUpEdit1.Properties.DisplayMember = "LATHE_NAME";
             this.lookUpEdit1.ItemIndex = 2;
-            lookUpEdit1.EditValue = 3;
+            lookUpEdit1.EditValue = 3;*/
             // lookUpEdit1.Properties.Columns.Add(new LookUpColumnInfo("LATHE_NAME"));
 
             // this.lookUpEdit1.Properties.PopulateColumns();
@@ -78,13 +78,13 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void GetLATHE_NAME1()
         {
-            gridLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
+           /* gridLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
             DataSet ds = new DataSet();
             ds = dao.getLatheList();
             gridLookUpEdit1.Properties.NullText = "gridLookUpEdit1";
             this.gridLookUpEdit1.Properties.DataSource = ds.Tables[0];
             this.gridLookUpEdit1.Properties.ValueMember = "LATHE_ID";
-            this.gridLookUpEdit1.Properties.DisplayMember = "LATHE_NAME";
+            this.gridLookUpEdit1.Properties.DisplayMember = "LATHE_NAME";*/
 
             //lookUpEdit1.Properties.Columns.Add(new LookUpColumnInfo("LATHE_NAME"));
 
@@ -94,13 +94,13 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void GetLATHE_NAME2()
         {
-            searchLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
+            /*searchLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
             DataSet ds = new DataSet();
             ds = dao.getLatheList();
             searchLookUpEdit1.Properties.NullText = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.DataSource = ds.Tables[0];
             this.searchLookUpEdit1.Properties.ValueMember = "LATHE_ID";
-            this.lookUpEdit1.Properties.DisplayMember = "LATHE_NAME";
+            this.lookUpEdit1.Properties.DisplayMember = "LATHE_NAME";*/
 
            // searchLookUpEdit1.Properties.Columns.Add(new LookUpColumnInfo("LATHE_NAME"));
 
@@ -110,13 +110,13 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void GetLATHE_NAME3()
         {
-            treeListLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
+           /* treeListLookUpEdit1.Properties.TextEditStyle = TextEditStyles.Standard;
             DataSet ds = new DataSet();
             ds = dao.getLatheList();
             treeListLookUpEdit1.Properties.NullText = "treeListLookUpEdit1";
             this.treeListLookUpEdit1.Properties.DataSource = ds.Tables[0];
             this.treeListLookUpEdit1.Properties.ValueMember = "LATHE_ID";
-            this.treeListLookUpEdit1.Properties.DisplayMember = "LATHE_NAME";
+            this.treeListLookUpEdit1.Properties.DisplayMember = "LATHE_NAME";*/
 
            // treeListLookUpEdit1.Properties.Columns.Add(new LookUpColumnInfo("LATHE_NAME"));
 

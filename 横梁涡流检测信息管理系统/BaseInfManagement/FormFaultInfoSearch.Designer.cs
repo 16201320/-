@@ -438,14 +438,14 @@
             // 详细信息ToolStripMenuItem
             // 
             this.详细信息ToolStripMenuItem.Name = "详细信息ToolStripMenuItem";
-            this.详细信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.详细信息ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.详细信息ToolStripMenuItem.Text = "详细信息";
             this.详细信息ToolStripMenuItem.Click += new System.EventHandler(this.详细信息ToolStripMenuItem_Click);
             // 
             // 缩略信息ToolStripMenuItem
             // 
             this.缩略信息ToolStripMenuItem.Name = "缩略信息ToolStripMenuItem";
-            this.缩略信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.缩略信息ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.缩略信息ToolStripMenuItem.Text = "缩略信息";
             this.缩略信息ToolStripMenuItem.Click += new System.EventHandler(this.缩略信息ToolStripMenuItem_Click);
             // 

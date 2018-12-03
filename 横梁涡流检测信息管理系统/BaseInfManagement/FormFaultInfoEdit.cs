@@ -78,7 +78,7 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 this.Text = "录入缺陷信息";
                 this.CHECK_TM.Text = DateTime.Now.ToString();
                 this.ENTERING_PERSON.Text = Frm_main.userName;
-            }           
+            }
         }
 
         //获取车型列表
@@ -341,9 +341,10 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         //设置修程格式
         private void REPAIR_NAME_EditValueChanging(object sender, ChangingEventArgs e)
         {
+
+            
             /*if (REPAIR_NAME.Text.ToString() == "1")
                 REPAIR_NAME.Text += "2";*/
-
            /* // MessageBox.Show(REPAIR_NAME.Text);
             if (REPAIR_NAME.Text == null || REPAIR_NAME.Text=="")
                 return;

@@ -149,24 +149,25 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("黑体", 9F);
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(1662, 36);
+            this.simpleButton2.Location = new System.Drawing.Point(1621, 41);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 13;
             this.simpleButton2.Text = "添加";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(1526, 35);
+            this.textEdit4.Location = new System.Drawing.Point(1500, 40);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(130, 24);
+            this.textEdit4.Size = new System.Drawing.Size(115, 24);
             this.textEdit4.TabIndex = 12;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(1434, 35);
+            this.labelControl4.Location = new System.Drawing.Point(1408, 38);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(86, 25);
             this.labelControl4.TabIndex = 11;
@@ -181,6 +182,7 @@
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 10;
             this.simpleButton5.Text = "添加";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton3
             // 
@@ -191,6 +193,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 8;
             this.simpleButton3.Text = "添加";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton1
             // 
@@ -201,6 +204,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "添加";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textEdit3
             // 
@@ -227,7 +231,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(922, 36);
+            this.labelControl3.Location = new System.Drawing.Point(922, 35);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(86, 25);
             this.labelControl3.TabIndex = 2;
@@ -300,10 +304,10 @@
             // 
             this.gridControl4.ContextMenuStrip = this.contextMenuStrip4;
             this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.Location = new System.Drawing.Point(1473, 2);
+            this.gridControl4.Location = new System.Drawing.Point(1408, 2);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(319, 815);
+            this.gridControl4.Size = new System.Drawing.Size(384, 815);
             this.gridControl4.TabIndex = 3;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -360,7 +364,7 @@
             this.gridControl3.Location = new System.Drawing.Point(922, 2);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(551, 815);
+            this.gridControl3.Size = new System.Drawing.Size(486, 815);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});

@@ -54,6 +54,8 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
              gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
             //gridControl1.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.End;
             gridControl1.EmbeddedNavigator.Dock = DockStyle.Bottom;
+
+            详细信息ToolStripMenuItem1_Click(new object(), new EventArgs() );
         }
 
         //设置面板信息
@@ -186,20 +188,34 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
         private void 详细信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 7; i < gridView1.Columns.Count; i++)
+            for (int i = 0; i < 7; i++)
+            {
+                gridView1.Columns[i].Visible = true;
+            }
+            for (int i = 7; i < 20; i++)
             {
                 gridView1.Columns[i].Visible = false;
             }
-            FreshForm();
+            for (int i = 20; i < gridView1.Columns.Count; i++)
+            {
+                gridView1.Columns[i].Visible = false;
+            }
         }
 
         private void 详细信息ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            for (int i = 7; i < gridView1.Columns.Count; i++)
+            for (int i = 0; i < 7; i++)
             {
                 gridView1.Columns[i].Visible = true;
             }
-            FreshForm();
+            for (int i = 19; i >= 7; i--)
+            {
+                gridView1.Columns[i].Visible = true;
+            }
+            for (int i = 20; i < gridView1.Columns.Count; i++)
+            {
+                gridView1.Columns[i].Visible = false;
+            }
         }
         public void openAdd(object sender, EventArgs e)
         {
@@ -212,6 +228,13 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         public void openDelete(object sender, EventArgs e)
         {
             this.删除ToolStripMenuItem_Click(sender, e);
+        }
+
+        public void print()
+        {
+            // this.gridControl1.Print();
+            //this.gridControl1.PrintDialog();
+            this.gridControl1.ShowPrintPreview();
         }
 
     }

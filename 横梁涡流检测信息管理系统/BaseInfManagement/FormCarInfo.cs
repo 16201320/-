@@ -440,5 +440,87 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
         {
             this.修改检测技术ToolStripMenuItem.PerformClick();
         }
+        //添加车型
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            LatheDao dao = new LatheDao();
+            string name = textEdit1.Text.Trim();
+            //控制参数格式
+            if (name == "")
+            {
+                MessageBox.Show("信息不能为空！");
+                return;
+            }
+                    string sql1 = "select * from LATHE_INFO where LATHE_NAME = '" + name + "'";
+                    if (common.SqlHelper.ExcuteSql(sql1) > 0)
+                    {
+                        MessageBox.Show("该车型已经被使用，请核查！", "信息提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    dao.Save(this.textEdit1.Text.Trim());
+            FreshForm();
+        }
+        
+        //添加车列
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            LatheColumnDao dao = new LatheColumnDao();
+            string name = textEdit2.Text.Trim();
+            //控制参数格式
+            if (name == "")
+            {
+                MessageBox.Show("信息不能为空！");
+                return;
+            }
+                    string sql1 = "select * from LATHE_COLUMN where COLUMN_NAME = '" + name + "'";
+                    if (common.SqlHelper.ExcuteSql(sql1) > 0)
+                    {
+                        MessageBox.Show("该车列已经被使用，请核查！", "信息提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    dao.Save(this.textEdit2.Text.Trim());
+            FreshForm();
+        }
+        //添加吊挂设备
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            HoistingEquipmentInfoDao dao = new HoistingEquipmentInfoDao();
+            string name = textEdit3.Text.Trim();
+            //控制参数格式
+            if (name == "")
+            {
+                MessageBox.Show("信息不能为空！");
+                return;
+            }
+                    string sql1 = "select * from HOISTINGEQUIPMENT_INFO where EQUIMENT_NAME = '" + name + "'";
+                    if (common.SqlHelper.ExcuteSql(sql1) > 0)
+                    {
+                        MessageBox.Show("该吊挂设备已经被添加过了！", "信息提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    dao.Save(this.textEdit3.Text.Trim());
+            FreshForm();
+        }
+        //添加检测技术
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+             DETECTION_TECHNOLOGYInDao dao = new DETECTION_TECHNOLOGYInDao();
+            string name = textEdit4.Text.Trim();
+            //控制参数格式
+            if (name == "")
+            {
+                MessageBox.Show("信息不能为空！");
+                return;
+            }
+                    string sql1 = "select * from DETECTION_TECHNOLOGY where Detection_Technology_NAME = '" + name + "'";
+                    if (common.SqlHelper.ExcuteSql(sql1) > 0)
+                    {
+                        MessageBox.Show("该检测技术已被添加过！", "信息提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    dao.Save(this.textEdit4.Text.Trim());
+            FreshForm();
+        }
     }
 }

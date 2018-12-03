@@ -21,9 +21,9 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
             InitializeComponent();
 
             //设置账号类型下拉框
-            comboBoxEdit1.Properties.AutoComplete = true;
-            comboBoxEdit1.Properties.CycleOnDblClick = true;
-            ComboBoxItemCollection coll = comboBoxEdit1.Properties.Items;
+            ACCOUNT_TYPE.Properties.AutoComplete = true;
+            ACCOUNT_TYPE.Properties.CycleOnDblClick = true;
+            ComboBoxItemCollection coll = ACCOUNT_TYPE.Properties.Items;
             coll.Add("员工");
             coll.Add("管理员");
 
@@ -55,10 +55,25 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
 
             gridControl1.DataSource = ds.Tables[0];
         }
-
+        //添加登陆用户
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
+            DLLAdmin dao = new DLLAdmin();
+            string name = ACCOUNT.Text.Trim();
+            //控制参数格式
+            if (name == "")
+            {
+                MessageBox.Show("信息不能为空！");
+                return;
+            }
+                    string sql1 = "select * from ADMIN_INFO where ACCOUNT = '" + name + "'";
+                    if (common.SqlHelper.ExcuteSql(sql1) > 0)
+                    {
+                        MessageBox.Show("该账号已经被使用！", "信息提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                    dao.add(this.ACCOUNT.Text.Trim(), this.ACCOUNT_TYPE.Text.Trim(), this.NAME.Text.Trim(), this.PASSWORD.Text.Trim());
+            BindGridView();
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)
@@ -145,6 +160,11 @@ namespace 横梁涡流检测信息管理系统.BaseInfManagement
                 MessageBox.Show("删除失败，这个车型在被使用！\n");
                 return;
             }
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            this.修改ToolStripMenuItem.PerformClick();
         }
     }
 }
